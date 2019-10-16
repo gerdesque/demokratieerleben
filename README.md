@@ -1,4 +1,4 @@
-# Demokratie leben
+# Demokratie *er*leben
 
 Es ist 1923. Karl und Anna, zwei Kinder aus Arbeiterfamilien machen sich
 Gedanken über ihre Zukunft. Sollen sie den selben Weg einschlagen wie

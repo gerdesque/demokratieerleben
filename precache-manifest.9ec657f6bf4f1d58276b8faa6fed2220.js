@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f86615bd02efacf657cb38d9179fcb1e",
+    "revision": "203453cb8ab3f56352c3d25b9e4b4f1b",
     "url": "/demokratieerleben/index.html"
   },
   {

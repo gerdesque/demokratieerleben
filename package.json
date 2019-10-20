@@ -1,7 +1,7 @@
 {
   "name": "demokratieerleben",
   "version": "0.1.0",
-  "homepage": "https://github.com/gerdesque/demokratieerleben",
+  "homepage": "https://gerdesque.github.io/demokratieerleben/",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",

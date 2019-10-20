@@ -13,6 +13,6 @@ code {
 }
 
 html { 
-  background: url('banner.jpeg') no-repeat center center fixed;
+  background: url('banner.png') no-repeat center center fixed;
   background-size: cover;
 }

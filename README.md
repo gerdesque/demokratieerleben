@@ -1,6 +1,6 @@
 # Demokratie *er*leben
 
-Es ist 1923. Karl und Anna, zwei Kinder aus Arbeiterfamilien machen sich
+Es ist 1928. Karl und Anna, zwei Kinder aus Arbeiterfamilien machen sich
 Gedanken über ihre Zukunft. Sollen sie den selben Weg einschlagen wie
 ihre Eltern? Arbeiten wie der Vater im Bergbau oder wie die Mutter in
 der Weberei? In ihrem letzten Feriensommer verbringen die beiden 2

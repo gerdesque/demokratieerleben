@@ -10,5 +10,3 @@ Kinderrepublik.
 Trefft Anna und Karl, lasst euch ihre Geschichte erzählen und begleitet
 sie dabei, wie sie sich mit der neu geschaffenen Demokratie
 auseinandersetzen und selbst Demokratie (er)leben.
-
-

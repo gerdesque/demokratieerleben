@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gerdesque/demokratieerleben/static/css/main.4f21a384.chunk.css",
+    "main.js": "/gerdesque/demokratieerleben/static/js/main.f3bee79e.chunk.js",
+    "main.js.map": "/gerdesque/demokratieerleben/static/js/main.f3bee79e.chunk.js.map",
+    "runtime-main.js": "/gerdesque/demokratieerleben/static/js/runtime-main.41c2b63d.js",
+    "runtime-main.js.map": "/gerdesque/demokratieerleben/static/js/runtime-main.41c2b63d.js.map",
+    "static/js/2.fc5e4144.chunk.js": "/gerdesque/demokratieerleben/static/js/2.fc5e4144.chunk.js",
+    "static/js/2.fc5e4144.chunk.js.map": "/gerdesque/demokratieerleben/static/js/2.fc5e4144.chunk.js.map",
+    "index.html": "/gerdesque/demokratieerleben/index.html",
+    "precache-manifest.c20083ae25de2c2db081fdec1c930189.js": "/gerdesque/demokratieerleben/precache-manifest.c20083ae25de2c2db081fdec1c930189.js",
+    "service-worker.js": "/gerdesque/demokratieerleben/service-worker.js",
+    "static/css/main.4f21a384.chunk.css.map": "/gerdesque/demokratieerleben/static/css/main.4f21a384.chunk.css.map",
+    "static/media/index.css": "/gerdesque/demokratieerleben/static/media/banner.4634ec6c.png",
+    "static/media/App.css": "/gerdesque/demokratieerleben/static/media/bird-cells.eee0b154.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41c2b63d.js",
+    "static/js/2.fc5e4144.chunk.js",
+    "static/css/main.4f21a384.chunk.css",
+    "static/js/main.f3bee79e.chunk.js"
+  ]
+}

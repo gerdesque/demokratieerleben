@@ -20,16 +20,16 @@ function App() {
         </div>
         <div id="chapter2" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            <div className="title box">Willkommen in der Kinderrepublik</div>
+            <div className="title box">Es ist 1927. Irgendwo im Ruhrgebiet leben zwei Kinder: Anna und Karl. Die Eltern der beiden gehören zur großen Arbeiterschaft, die im Bergbau, in Webereien, Fabriken und Stahlwerken arbeiten. Anna und Karl machen sich Gedanken über ihre Zukunft, denn sie sind 13 Jahre alt und ihr letztes Schuljahr steht bald bevor. Begleite sie dabei, wie sie ihren Weg zu einer „Kinderrepublik“ der sozialistischen Arbeiterjugend finden und was sie dort erleben.</div>
           </div>
           <div className="parallax__layer parallax__layer--back"></div>
         </div>
         <div id="chapter3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-            {/* <div className="title box">Foreground Layer</div> */}
+          <div className="title box">Wen möchtest du auf diesem Weg begleiten?</div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--left">
-            {/* <div className="title box">Base Layer</div> */}
+            {/* <div className="title box">Foreground Layer</div> */}
           </div>
         </div>
         <div id="chapter4" className="parallax__group">

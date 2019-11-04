@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46918af82bed0c5e088f06bf10c36aa5",
+    "revision": "4269f4aec0052f7052d96a70c7012b04",
     "url": "/demokratieerleben/index.html"
   },
   {
-    "revision": "48dde808a8cdb408f813",
-    "url": "/demokratieerleben/static/css/main.67839542.chunk.css"
+    "revision": "532080a50a1280074def",
+    "url": "/demokratieerleben/static/css/main.58efd402.chunk.css"
   },
   {
     "revision": "85c57f67ec8fa22387ed",
     "url": "/demokratieerleben/static/js/2.6f5489d9.chunk.js"
   },
   {
-    "revision": "48dde808a8cdb408f813",
+    "revision": "532080a50a1280074def",
     "url": "/demokratieerleben/static/js/main.3c030ad3.chunk.js"
   },
   {

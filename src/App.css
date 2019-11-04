@@ -202,24 +202,32 @@
 
   @media (min-width: 600px) {
     h1 {
-      font-size: 4em;
+      font-size: 6em;
     }
   }
 
   @media (min-width: 900px) {
     h1 {
-      font-size: 5em;
+      font-size: 8em;
     }
   }
 
   @media (min-width: 1200px) {
     h1 {
-      font-size: 6em;
+      font-size: 10em;
+    }
+
+    h2 {
+      font-size: 4em;
     }
   }
 
   @media (min-width: 1800px) {
     h1 {
-      font-size: 9em;
+      font-size: 12em;
+    }
+
+    h2 {
+      font-size: 6em;
     }
   }

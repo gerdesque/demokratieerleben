@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {Link} from "react-router-dom";
-import './ChapterOne.css';
+import './ChapterTwo.css';
 
-class ChapterOne extends Component {
+class ChapterTwo extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      avatar: this.props.location.state ? this.props.location.state.avatar : "Anna"
+      avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
+      one: this.props.location.state ? this.props.location.state.one : "Anna"
     };
   }
 
@@ -17,7 +17,8 @@ class ChapterOne extends Component {
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
-              <h1 className="title__white">{this.state.avatar}s Familie</h1>
+              <h1 className="title__white">{this.state.avatar} geht zur Ortsgruppe</h1>
+              <h2>{this.state.one}</h2>
             </div>
           </div>
           <div className="parallax__layer parallax__layer--fore">
@@ -32,10 +33,7 @@ class ChapterOne extends Component {
         </div>
         <div id="chapter3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, one: "Anna" } }}>Anna</Link>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, one: "Karl" } }}>Karl</Link>
-          </div>
+          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p></div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--left">
             {/* <div className="title box">Foreground Layer</div> */}
@@ -72,4 +70,4 @@ class ChapterOne extends Component {
   }
 }
 
-export default ChapterOne;
+export default ChapterTwo;

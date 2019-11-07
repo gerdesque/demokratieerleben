@@ -43,6 +43,11 @@
     list-style: none;
   }
 
+  a {
+    text-decoration: none;
+  }
+  
+
   @media (min-width: 600px) {
     h1 {
       font-size: 6em;

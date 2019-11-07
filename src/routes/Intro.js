@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import './Intro.css';
 import Birds from '../Birds';
 
@@ -24,7 +25,10 @@ function Intro() {
         </div>
         <div id="chapter3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p></div>
+          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p>
+            <Link to={{ pathname: "/chapterone", state: { avatar: "Anna" } }}>Anna</Link>
+            <Link to={{ pathname: "/chapterone", state: { avatar: "Karl" } }}>Karl</Link>
+          </div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--left">
             {/* <div className="title box">Foreground Layer</div> */}

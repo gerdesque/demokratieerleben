@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './Nav';
 const Intro = lazy(() => import('./routes/Intro'));
 const ChapterOne = lazy(() => import('./routes/ChapterOne'));
+const ChapterTwo = lazy(() => import('./routes/ChapterTwo'));
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Intro}/>
             <Route path="/chapterone" component={ChapterOne}/>
-            <Route path="/chaptertwo" component={ChapterOne}/>
+            <Route path="/chaptertwo" component={ChapterTwo}/>
           </Switch>
         </Suspense>
       </div>

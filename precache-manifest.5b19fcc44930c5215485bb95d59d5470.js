@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "161dbe56566f6b69d97889a620b4712e",
+    "revision": "466b01692ee59524f8719e6edac6d18a",
     "url": "/demokratieerleben/index.html"
   },
   {
-    "revision": "1a09ea29f189c12931fb",
-    "url": "/demokratieerleben/static/css/3.67f0494d.chunk.css"
+    "revision": "67c3b97e250dce53bbd6",
+    "url": "/demokratieerleben/static/css/3.0942ee1f.chunk.css"
   },
   {
-    "revision": "196b8b4aadad1fc89751",
-    "url": "/demokratieerleben/static/css/4.67f0494d.chunk.css"
+    "revision": "9ef80487d6c7f788cc17",
+    "url": "/demokratieerleben/static/css/4.01f36c1f.chunk.css"
   },
   {
-    "revision": "f70fadbef382cf8cd242",
-    "url": "/demokratieerleben/static/css/main.1f240edf.chunk.css"
+    "revision": "fb85b3ba0ef49284f968",
+    "url": "/demokratieerleben/static/css/main.1a83a792.chunk.css"
   },
   {
-    "revision": "65ca0809e8ed31ee9291",
-    "url": "/demokratieerleben/static/js/2.ccc023ba.chunk.js"
+    "revision": "1e187b86d1dbc9d07a15",
+    "url": "/demokratieerleben/static/js/2.b407cb9d.chunk.js"
   },
   {
-    "revision": "1a09ea29f189c12931fb",
-    "url": "/demokratieerleben/static/js/3.8f66f43a.chunk.js"
+    "revision": "67c3b97e250dce53bbd6",
+    "url": "/demokratieerleben/static/js/3.fc09563c.chunk.js"
   },
   {
-    "revision": "196b8b4aadad1fc89751",
-    "url": "/demokratieerleben/static/js/4.59386781.chunk.js"
+    "revision": "9ef80487d6c7f788cc17",
+    "url": "/demokratieerleben/static/js/4.7c1e32d9.chunk.js"
   },
   {
-    "revision": "f70fadbef382cf8cd242",
-    "url": "/demokratieerleben/static/js/main.4aae4021.chunk.js"
+    "revision": "fb85b3ba0ef49284f968",
+    "url": "/demokratieerleben/static/js/main.01042318.chunk.js"
   },
   {
-    "revision": "c9bdf7e90ddf2f74f044",
-    "url": "/demokratieerleben/static/js/runtime-main.e7ece9db.js"
+    "revision": "e376ed85eb6bf8e5d89a",
+    "url": "/demokratieerleben/static/js/runtime-main.e9456682.js"
   },
   {
     "revision": "0a00c04029f465a305f31054da5e0b07",

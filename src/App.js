@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
 import Nav from './Nav';
-const Intro = lazy(() => import('./routes/Intro'));
+import Intro from './routes/Intro';
 const ChapterOne = lazy(() => import('./routes/ChapterOne'));
 const ChapterTwo = lazy(() => import('./routes/ChapterTwo'));
 

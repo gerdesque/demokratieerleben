@@ -1,47 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7f5ce3b0c7e2763125a0113b260ca8f",
+    "revision": "da926d127db65945bd0944655af3368c",
     "url": "/demokratieerleben/index.html"
   },
   {
-    "revision": "f4a0273bc0cbb7fd0369",
-    "url": "/demokratieerleben/static/css/3.3d39b99c.chunk.css"
+    "revision": "19f7afe81d7b1652b0fe",
+    "url": "/demokratieerleben/static/css/3.0942ee1f.chunk.css"
   },
   {
-    "revision": "53bb39edb25b124e8502",
-    "url": "/demokratieerleben/static/css/4.0942ee1f.chunk.css"
+    "revision": "cb45962d4c4827bd25de",
+    "url": "/demokratieerleben/static/css/4.01f36c1f.chunk.css"
   },
   {
-    "revision": "e04f254c0b24795f71b7",
-    "url": "/demokratieerleben/static/css/5.01f36c1f.chunk.css"
+    "revision": "2a22eb46ef7e00332229",
+    "url": "/demokratieerleben/static/css/main.1a83a792.chunk.css"
   },
   {
-    "revision": "92d1cb5b22db87230c02",
-    "url": "/demokratieerleben/static/css/main.ad449894.chunk.css"
+    "revision": "e1a7e4b66ccc64115f6b",
+    "url": "/demokratieerleben/static/js/2.60b92847.chunk.js"
   },
   {
-    "revision": "286b53a783e075f58cda",
-    "url": "/demokratieerleben/static/js/2.aeebd57c.chunk.js"
+    "revision": "19f7afe81d7b1652b0fe",
+    "url": "/demokratieerleben/static/js/3.c5a024b7.chunk.js"
   },
   {
-    "revision": "f4a0273bc0cbb7fd0369",
-    "url": "/demokratieerleben/static/js/3.d3cce84a.chunk.js"
+    "revision": "cb45962d4c4827bd25de",
+    "url": "/demokratieerleben/static/js/4.3c2770cb.chunk.js"
   },
   {
-    "revision": "53bb39edb25b124e8502",
-    "url": "/demokratieerleben/static/js/4.9b4fbf15.chunk.js"
+    "revision": "2a22eb46ef7e00332229",
+    "url": "/demokratieerleben/static/js/main.05cf66f5.chunk.js"
   },
   {
-    "revision": "e04f254c0b24795f71b7",
-    "url": "/demokratieerleben/static/js/5.04034ace.chunk.js"
-  },
-  {
-    "revision": "92d1cb5b22db87230c02",
-    "url": "/demokratieerleben/static/js/main.e2700fd6.chunk.js"
-  },
-  {
-    "revision": "a9fc8ae3acd6aa29851d",
-    "url": "/demokratieerleben/static/js/runtime-main.9942cb0c.js"
+    "revision": "39e2e38b0fea800ad66c",
+    "url": "/demokratieerleben/static/js/runtime-main.48fd76da.js"
   },
   {
     "revision": "0a00c04029f465a305f31054da5e0b07",

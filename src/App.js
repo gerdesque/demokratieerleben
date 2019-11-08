@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import './App.css';
 import Nav from './Nav';
 import Intro from './routes/Intro';
@@ -8,7 +8,7 @@ const ChapterTwo = lazy(() => import('./routes/ChapterTwo'));
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/demokratieerleben">
       <div className="App">
         <Nav />
         <Suspense fallback={<div>Loading...</div>}>
@@ -19,7 +19,7 @@ function App() {
           </Switch>
         </Suspense>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

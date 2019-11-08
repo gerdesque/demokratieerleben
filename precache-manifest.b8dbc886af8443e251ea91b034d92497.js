@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "466b01692ee59524f8719e6edac6d18a",
+    "revision": "4af9c0f2ce4d5189368af7afe73f1b40",
     "url": "/demokratieerleben/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/demokratieerleben/static/css/4.01f36c1f.chunk.css"
   },
   {
-    "revision": "fb85b3ba0ef49284f968",
+    "revision": "151e5a89ecb9f6d6ef36",
     "url": "/demokratieerleben/static/css/main.1a83a792.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/demokratieerleben/static/js/4.7c1e32d9.chunk.js"
   },
   {
-    "revision": "fb85b3ba0ef49284f968",
-    "url": "/demokratieerleben/static/js/main.01042318.chunk.js"
+    "revision": "151e5a89ecb9f6d6ef36",
+    "url": "/demokratieerleben/static/js/main.cf1f6d3b.chunk.js"
   },
   {
     "revision": "e376ed85eb6bf8e5d89a",

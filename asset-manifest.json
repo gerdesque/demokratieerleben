@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/demokratieerleben/static/css/main.1a83a792.chunk.css",
-    "main.js": "/demokratieerleben/static/js/main.64880000.chunk.js",
-    "main.js.map": "/demokratieerleben/static/js/main.64880000.chunk.js.map",
+    "main.js": "/demokratieerleben/static/js/main.820773fb.chunk.js",
+    "main.js.map": "/demokratieerleben/static/js/main.820773fb.chunk.js.map",
     "runtime-main.js": "/demokratieerleben/static/js/runtime-main.e9456682.js",
     "runtime-main.js.map": "/demokratieerleben/static/js/runtime-main.e9456682.js.map",
     "static/js/2.b407cb9d.chunk.js": "/demokratieerleben/static/js/2.b407cb9d.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.7c1e32d9.chunk.js": "/demokratieerleben/static/js/4.7c1e32d9.chunk.js",
     "static/js/4.7c1e32d9.chunk.js.map": "/demokratieerleben/static/js/4.7c1e32d9.chunk.js.map",
     "index.html": "/demokratieerleben/index.html",
-    "precache-manifest.e39551a52c24d8132c9092e10336220a.js": "/demokratieerleben/precache-manifest.e39551a52c24d8132c9092e10336220a.js",
+    "precache-manifest.ad4317ac30f80b10f51e10bfe81ebbe7.js": "/demokratieerleben/precache-manifest.ad4317ac30f80b10f51e10bfe81ebbe7.js",
     "service-worker.js": "/demokratieerleben/service-worker.js",
     "static/css/3.0942ee1f.chunk.css.map": "/demokratieerleben/static/css/3.0942ee1f.chunk.css.map",
     "static/css/4.01f36c1f.chunk.css.map": "/demokratieerleben/static/css/4.01f36c1f.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.e9456682.js",
     "static/js/2.b407cb9d.chunk.js",
     "static/css/main.1a83a792.chunk.css",
-    "static/js/main.64880000.chunk.js"
+    "static/js/main.820773fb.chunk.js"
   ]
 }

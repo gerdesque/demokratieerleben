@@ -7,7 +7,7 @@ import TicTacToe from '../games/TicTacToe';
 function Intro() {
   return (
       <div className="parallax">
-        {/* <div id="header" className="parallax__group">
+        <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
               <h1 className="title__white">Demokratie <i>er</i>leben</h1>
@@ -31,10 +31,10 @@ function Intro() {
             <Link to={{ pathname: "/chapterone", state: { avatar: "Karl" } }}>Karl</Link>
           </div>
           </div>
-          <div className="parallax__layer parallax__layer--base parallax__layer--left"> */}
+          <div className="parallax__layer parallax__layer--base parallax__layer--left">
             {/* <div className="title box">Foreground Layer</div> */}
-          {/* </div>
-        </div> */}
+          </div>
+        </div>
         <div id="chapter4" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title box"><TicTacToe /></div>

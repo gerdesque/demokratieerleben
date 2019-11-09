@@ -77,7 +77,6 @@
   padding: 3%;
   background: rgba(240, 230, 220, .7);
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-  width: 75%;
 }
 
 .box a {
@@ -91,7 +90,7 @@
   position: absolute;
   left: 50%;
   top: 66%;
-  color: gold;
+  color: orange;
   transform: translate(-50%, -50%);
 }
 

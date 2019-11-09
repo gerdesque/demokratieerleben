@@ -1,0 +1,35 @@
+.game-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  background: orange;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .7);
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5;
+  width: 33%;
+}
+
+.square::before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+
+.square:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: rgba(240, 230, 220, .7);
+  cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}

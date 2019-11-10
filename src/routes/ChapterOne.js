@@ -1,6 +1,7 @@
 import React, { Component, lazy } from 'react';
 import {Link} from "react-router-dom";
 import './ChapterOne.css';
+import Rain from '../Rain';
 const Puzzle = lazy(() => import('../games/Puzzle'));
 
 class groupOne extends Component {
@@ -17,6 +18,7 @@ class groupOne extends Component {
       <div className="parallax">
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
+            <Rain />
             <div className="title">
               <h1 className="title__white">Bei {this.state.avatar}</h1>
             </div>

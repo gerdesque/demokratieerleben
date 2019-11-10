@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import originalImage from '../assets/puzzle.png';
+import originalImage from '../assets/puzzle.webp';
 import './Puzzle.css';
 
 class Puzzle extends Component {
@@ -13,7 +13,7 @@ class Puzzle extends Component {
     const pieces = [...Array(16)]
       .map((_, i) => (
         {
-          img: `puzzle_${('0' + (i + 1)).substr(-2)}.png`,
+          img: `puzzle_${('0' + (i + 1)).substr(-2)}`,
           order: i,
           board: 'shuffled'
         }
@@ -68,10 +68,14 @@ class Puzzle extends Component {
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => this.handleDrop(e, index, boardName)}>
         {
-          piece && <img alt=""
-            draggable
-            onDragStart={(e) => this.handleDragStart(e, piece.order)}
-            src={require(`../assets/${piece.img}`)} />
+          piece && <picture>
+            <source srcSet={require(`../assets/${piece.img}.webp`)} type="image/webp" />
+            <source srcSet={require(`../assets/fallback/${piece.img}.png`)} type="image/png" /> 
+            <img 
+              draggable
+              onDragStart={(e) => this.handleDragStart(e, piece.order)}
+              src={require(`../assets/fallback/${piece.img}.png`)} alt={'Puzzle' + index} />
+          </picture>
         }
       </li>
     );

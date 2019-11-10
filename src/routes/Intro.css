@@ -110,7 +110,11 @@
 }
 
 #header .parallax__layer--base {
-  background-image: url(../assets/header.png);
+  background-image: url(../assets/header.webp);
+}
+
+.no-webp #header .parallax__layer--base {
+  background-image: url(../assets/fallback/header.png);
 }
 
 #group2 {
@@ -119,7 +123,11 @@
 }
 
 #group2 .parallax__layer--deep {
-  background-image: url(../assets/intro.png);
+  background-image: url(../assets/intro.webp);
+}
+
+.no-webp #group2 .parallax__layer--deep {
+  background-image: url(../assets/fallback/intro.png);
 }
 
 #group3 {
@@ -128,9 +136,18 @@
 }
 
 #group3 .parallax__layer--base {
-  background-image: url(../assets/boy1.png);
+  background-image: url(../assets/boy1.webp);
 }
+
+.no-webp #group3 .parallax__layer--base {
+  background-image: url(../assets/fallback/boy1.png);
+}
+
 #group3 .parallax__layer--back {
-  background-image: url(../assets/girl1.png);
+  background-image: url(../assets/girl1.webp);
+}
+
+.no-webp #group3 .parallax__layer--back {
+  background-image: url(../assets/fallback/girl2.png);
 }
 

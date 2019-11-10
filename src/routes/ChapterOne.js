@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import {Link} from "react-router-dom";
 import './ChapterOne.css';
-import Puzzle from '../games/Puzzle';
+const Puzzle = lazy(() => import('../games/Puzzle'));
 
 class groupOne extends Component {
 

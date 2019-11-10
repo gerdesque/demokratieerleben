@@ -109,7 +109,11 @@
 }
 
 #header .parallax__layer--base {
-  background-image: url(../assets/family.png);
+  background-image: url(../assets/family.webp);
+}
+
+.no-webp #header .parallax__layer--base {
+  background-image: url(../assets/fallback/family.png);
 }
 
 #group2 {
@@ -118,7 +122,11 @@
 }
 
 #group2 .parallax__layer--deep {
-  background-image: url(../assets/intro.png);
+  background-image: url(../assets/intro.webp);
+}
+
+.no-webp #group2 .parallax__layer--deep {
+  background-image: url(../assets/fallback/intro.png);
 }
 
 #group3 {
@@ -127,57 +135,17 @@
 }
 
 #group3 .parallax__layer--base {
-  background-image: url(../assets/boy1.png);
+  background-image: url(../assets/boy1.webp);
 }
+
+.no-webp #group3 .parallax__layer--base {
+  background-image: url(../assets/fallback/boy1.png);
+}
+
 #group3 .parallax__layer--back {
-  background-image: url(../assets/girl1.png);
+  background-image: url(../assets/girl1.webp);
 }
 
-
-/* #chapter2 {
-  z-index: 3;
+.no-webp #group3 .parallax__layer--back {
+  background-image: url(../assets/fallback/girl1.png);
 }
-
-#chapter2 .parallax__layer--back {
-  background-image: url(../assets/republic.png);
-}
-
-#chapter3 {
-  z-index: 4;
-}
-
-#chapter3 .parallax__layer--base {
-  background-image: url(../assets/boy1.png);
-}
-
-#chapter4 {
-  z-index: 2;
-}
-
-#chapter4 .parallax__layer--deep {
-  background-image: url(../assets/background.jpg);
-}
-
-#chapter5 {
-  z-index: 3;
-}
-
-#chapter5 .parallax__layer--base {
-  background-image: url(../assets/girl1.png);
-}
-
-#chapter6 {
-  z-index: 2;
-}
-
-#chapter6 .parallax__layer--back {
-  background-image: url(../assets/tent_rules.png);
-}
-
-#chapter7 {
-  z-index: 3;
-}
-
-#chapter7 .parallax__layer--base {
-  background-image: url(../assets/girl2.png);
-} */

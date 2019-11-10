@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import './ChapterOne.css';
+import Puzzle from '../games/Puzzle';
 
-class ChapterOne extends Component {
+class groupOne extends Component {
 
   constructor(props) {
     super(props);
@@ -17,54 +18,53 @@ class ChapterOne extends Component {
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
-              <h1 className="title__white">{this.state.avatar}s Familie</h1>
+              <h1 className="title__white">Bei {this.state.avatar}</h1>
             </div>
           </div>
           <div className="parallax__layer parallax__layer--fore">
-            <div className="text__action"><h2>Scrolle nach unten! &dArr;</h2></div>
+            <div className="subtitle"><h2>Scrolle nach unten! &dArr;</h2></div>
           </div>
         </div>
-        <div id="chapter2" className="parallax__group">
+        <div id="group2" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            <div className="title box"><p>Es ist 1927. Irgendwo im Ruhrgebiet leben zwei Kinder: Anna und Karl. Die Eltern der beiden gehören zur großen Arbeiterschaft, die im Bergbau, in Webereien, Fabriken und Stahlwerken arbeiten. Anna und Karl machen sich Gedanken über ihre Zukunft, denn sie sind 13 Jahre alt und ihr letztes Schuljahr steht bald bevor. Begleite sie dabei, wie sie ihren Weg zu einer „Kinderrepublik“ der sozialistischen Arbeiterjugend finden und was sie dort erleben.</p></div>
+            <div className="box"><p>Anna ist gerade 13 Jahre alt geworden. Ihr Vater arbeitet unter Tage im Bergbau. Ihre Mutter arbeitet in einer Weberei. Der Lohn der Beiden reicht gerade aus, um Anna und ihre 4 jüngeren Geschwister sowie ihren alten Großvater zu versorgen.</p></div>
           </div>
           <div className="parallax__layer parallax__layer--back"></div>
         </div>
-        <div id="chapter3" className="parallax__group">
+        <div id="group3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, one: "Anna" } }}>Anna</Link>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, one: "Karl" } }}>Karl</Link>
+          <div className="box"><p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>
+            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Vater" } }}>Vater</Link>
+            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Mutter" } }}>Mutter</Link>
+            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Großvater" } }}>Großvater</Link>
+            <p>Hier Videos einfügen!</p>
           </div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--left">
-            {/* <div className="title box">Foreground Layer</div> */}
           </div>
         </div>
-        <div id="chapter4" className="parallax__group">
+        <div id="group4" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            {/* <div className="title box">Base Layer</div> */}
           </div>
           <div className="parallax__layer parallax__layer--back"></div>
           <div className="parallax__layer parallax__layer--deep"></div>
         </div>
-        <div id="chapter5" className="parallax__group">
+        <div id="group5" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-            {/* <div className="title box">Foreground Layer</div> */}
-          </div>
-          <div className="parallax__layer parallax__layer--base parallax__layer--right">
-            {/* <div className="title box">Base Layer</div> */}
+            <div className="box"><p>Anna wurde traurig bei dem Gedanken an ihrer verstorbene Großmutter, die sie sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte sie sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der sie einen Aushang in der Schule gesehen hatte.</p></div>
           </div>
         </div>
-        <div id="chapter6" className="parallax__group">
+        <div id="group6" className="parallax__group">
           <div className="parallax__layer parallax__layer--back"></div>
           <div className="parallax__layer parallax__layer--base">
-            {/* <div className="title box">Base Layer</div> */}
+            <div className="box">
+              <Puzzle />
+              <p>Erfolgreich gelöstes Puzzle leitet zum nächsten Kapitel!</p>
+            </div>
           </div>
         </div>
-        <div id="chapter7" className="parallax__group">
+        <div id="group7" className="parallax__group">
           <div className="parallax__layer parallax__layer--base parallax__layer--right">
-            {/* <div className="title box">Base Layer</div> */}
           </div>
         </div>
       </div>
@@ -72,4 +72,4 @@ class ChapterOne extends Component {
   }
 }
 
-export default ChapterOne;
+export default groupOne;

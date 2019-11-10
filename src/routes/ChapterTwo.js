@@ -7,7 +7,7 @@ class ChapterTwo extends Component {
     super(props);
     this.state = {
       avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
-      one: this.props.location.state ? this.props.location.state.one : "Anna"
+      family: this.props.location.state ? this.props.location.state.family : "Mutter"
     };
   }
 
@@ -17,52 +17,52 @@ class ChapterTwo extends Component {
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
-              <h1 className="title__white">{this.state.avatar} geht zur Ortsgruppe</h1>
-              <h2>{this.state.one}</h2>
+              <h1 className="title__white">Die Ortsgruppe</h1>
             </div>
           </div>
           <div className="parallax__layer parallax__layer--fore">
-            <div className="text__action"><h2>Scrolle nach unten! &dArr;</h2></div>
+            <div className="subtitle"><h2>Scrolle nach unten! &dArr;</h2></div>
           </div>
         </div>
-        <div id="chapter2" className="parallax__group">
+        <div id="group2" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            <div className="title box"><p>Es ist 1927. Irgendwo im Ruhrgebiet leben zwei Kinder: Anna und Karl. Die Eltern der beiden gehören zur großen Arbeiterschaft, die im Bergbau, in Webereien, Fabriken und Stahlwerken arbeiten. Anna und Karl machen sich Gedanken über ihre Zukunft, denn sie sind 13 Jahre alt und ihr letztes Schuljahr steht bald bevor. Begleite sie dabei, wie sie ihren Weg zu einer „Kinderrepublik“ der sozialistischen Arbeiterjugend finden und was sie dort erleben.</p></div>
+            <div className="box"><p>Anna betritt den großen Raum und wird direkt von einem Mädchen begrüßt, dass so alt ist wie sie: "Guten Tag, ich bin Gerda. Ich kümmere mich um die Neuen. Ich zeige dir, was wir hier machen. Wir bereiten gerade ein Zeltlager für das nächste Jahr vor."</p></div>
           </div>
-          <div className="parallax__layer parallax__layer--back"></div>
+          <div className="parallax__layer parallax__layer--back parallax__layer--left"></div>
         </div>
-        <div id="chapter3" className="parallax__group">
+        <div id="group3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-          <div className="title box"><p>Wen möchtest du auf diesem Weg begleiten?</p></div>
+          <div className="box"><p>Möchtest du mitmachen? / Anna ist sofort begeistert.</p><p>Hier Video einbinden!</p></div>
           </div>
-          <div className="parallax__layer parallax__layer--base parallax__layer--left">
-            {/* <div className="title box">Foreground Layer</div> */}
-          </div>
+          <div className="parallax__layer parallax__layer--base parallax__layer--left"></div>
+          <div className="parallax__layer parallax__layer--back parallax__layer--right"></div>
         </div>
-        <div id="chapter4" className="parallax__group">
+        <div id="group4" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            {/* <div className="title box">Base Layer</div> */}
           </div>
           <div className="parallax__layer parallax__layer--back"></div>
           <div className="parallax__layer parallax__layer--deep"></div>
         </div>
-        <div id="chapter5" className="parallax__group">
+        <div id="group5" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-            {/* <div className="title box">Foreground Layer</div> */}
+            <div className="box"><p>Anna schreibt einen Artikel über das geplante Tagesprogramm während des Zeltlagers. Wie sieht der Tagesplan aus?</p><p>Hier Spiel einfügen!</p></div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--right">
-            {/* <div className="title box">Base Layer</div> */}
           </div>
         </div>
-        <div id="chapter6" className="parallax__group">
+        <div id="group6" className="parallax__group">
           <div className="parallax__layer parallax__layer--back"></div>
           <div className="parallax__layer parallax__layer--base">
-            {/* <div className="title box">Base Layer</div> */}
+          </div>
+          <div className="parallax__layer parallax__layer--fore">
+            <div className="box"><p>Inzwischen steht auch fest, an welchem Ort das Lager aufgebaut wird: In Seekamp in der Nähe von Kiel. Auf einer Karte hat Annas Ortsgruppe markiert, aus welchen Städten der Weimarer Republik sich Kinder- und Jugendgruppen angemeldet haben.</p><p>Hier Karte einfügen!</p></div>
           </div>
         </div>
-        <div id="chapter7" className="parallax__group">
+        <div id="group7" className="parallax__group">
           <div className="parallax__layer parallax__layer--base parallax__layer--right">
-            {/* <div className="title box">Base Layer</div> */}
+          </div>
+          <div className="parallax__layer parallax__layer--fore">
+            <div className="box"><p>Bald geht es los ins Zeltlager Seekamp! Anna muss ihre Sachen zusammensuchen. Hilf ihr den Koffer zu packen!</p><p>Hier Spiel einfügen! Spiel gelöst leitet zum nächsten Kapitel</p></div>
           </div>
         </div>
       </div>

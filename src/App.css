@@ -16,6 +16,7 @@
     transform-style: preserve-3d;
     height: 100%;
     overflow-x: hidden;
+    background-image: url(./assets/background.jpg);
   }
 
   * {

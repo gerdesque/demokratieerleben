@@ -12,7 +12,6 @@ function TicTacToe() {
   const winner = calculateWinner(squares);
   const userSymbol = "X";
   const computerSymbol = "O";
-  let timeout;
 
   function getStatus() {
     if (winner) {
@@ -37,7 +36,7 @@ function TicTacToe() {
           setSquares(nextSquares);
 
           if (!calculateWinner(nextSquares)) {
-            timeout = setTimeout(() => {
+            setTimeout(() => {
               const generatedSquares = nextSquares.slice();
               const generatedSquare = setGeneratedSquare(generatedSquares);
               if (generatedSquare != null) {

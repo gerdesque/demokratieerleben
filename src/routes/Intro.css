@@ -49,16 +49,17 @@
 }
 
 .parallax__layer--left {
-  background-size: 100% 100%;
-  width: 50%;
+  background-size: contain;
   height: 50%;
+  background-position: left 5% top;
+  background-repeat: no-repeat;
 }
 
 .parallax__layer--right {
-  background-size: 100% 100%;
-  width: 50%;
+  background-size: contain;
   height: 50%;
-  left: 50%;
+  background-position: right 5% top;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -73,17 +74,7 @@
   color: white;
 }
 
-.box {
-  padding: 3%;
-  background: rgba(240, 230, 220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-
-.box a {
-  margin-right: 10px;
-}
-
-.text__action {
+.subtitle {
   font-family: CinnamonCake, arial, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -92,6 +83,22 @@
   top: 66%;
   color: orange;
   transform: translate(-50%, -50%);
+}
+
+.box {
+  padding: 3%;
+  background: rgba(240, 230, 220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+.box a {
+  margin-right: 10px;
 }
 
 /* style header and chapter
@@ -106,56 +113,24 @@
   background-image: url(../assets/header.png);
 }
 
-#chapter2 {
+#group2 {
   z-index: 3;
   /* slide under groups 1 and 3 */
 }
 
-#chapter2 .parallax__layer--back {
-  background-image: url(../assets/republic.png);
+#group2 .parallax__layer--deep {
+  background-image: url(../assets/intro.png);
 }
 
-#chapter3 {
+#group3 {
   z-index: 4;
   /* slide over group 2 and 4 */
 }
 
-#chapter3 .parallax__layer--base {
+#group3 .parallax__layer--base {
   background-image: url(../assets/boy1.png);
 }
-
-#chapter4 {
-  z-index: 2;
-  /* slide under group 3 and 5 */
-}
-
-#chapter4 .parallax__layer--deep {
-  background-image: url(../assets/background.jpg);
-}
-
-#chapter5 {
-  z-index: 3;
-  /* slide over group 4 and 6 */
-}
-
-#chapter5 .parallax__layer--base {
+#group3 .parallax__layer--back {
   background-image: url(../assets/girl1.png);
 }
 
-#chapter6 {
-  z-index: 2;
-  /* slide under group 5 and 7 */
-}
-
-#chapter6 .parallax__layer--back {
-  background-image: url(../assets/tent_rules.png);
-}
-
-#chapter7 {
-  z-index: 3;
-  /* slide over group 7 */
-}
-
-#chapter7 .parallax__layer--base {
-  background-image: url(../assets/girl2.png);
-}

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/demokratieerleben/precache-manifest.f54523d7800bbf440a459b96c5d27143.js"
+  "/demokratieerleben/precache-manifest.4bd55d874f51c0186e2100a5e6b21afe.js"
 );
 
 self.addEventListener('message', (event) => {

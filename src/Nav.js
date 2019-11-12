@@ -9,8 +9,8 @@ function Nav() {
   return (
     <nav>
       <ul>
-        {items.map((item) =>
-            <li>
+        {items.map((item, index) =>
+            <li key={index}>
               <NavLink exact to={item}>{item}</NavLink>
             </li>
           )}

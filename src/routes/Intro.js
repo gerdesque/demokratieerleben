@@ -26,8 +26,8 @@ function Intro() {
         <div id="group3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
           <div className="box"><p>Wen möchtest du auf diesem Weg begleiten?</p>
-            <Link to={{ pathname: "/chapterone", state: { avatar: "Karl" } }}>Karl</Link>
-            <Link to={{ pathname: "/chapterone", state: { avatar: "Anna" } }}>Anna</Link>
+            <NavLink exact to={{ pathname: "/chapterone", state: { avatar: "Karl" } }}>Karl</NavLink>
+            <NavLink exact to={{ pathname: "/chapterone", state: { avatar: "Anna" } }}>Anna</NavLink>
           </div>
           </div>
           <div className="parallax__layer parallax__layer--base parallax__layer--left"></div>

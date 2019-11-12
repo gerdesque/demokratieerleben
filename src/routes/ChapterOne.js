@@ -36,9 +36,9 @@ class groupOne extends Component {
         <div id="group3" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
           <div className="box"><p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Vater" } }}>Vater</Link>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Mutter" } }}>Mutter</Link>
-            <Link to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Großvater" } }}>Großvater</Link>
+            <NavLink exact to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Vater" } }}>Vater</NavLink>
+            <NavLink exact to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Mutter" } }}>Mutter</NavLink>
+            <NavLink exact to={{ pathname: "/chaptertwo", state: { ...this.state, family: "Großvater" } }}>Großvater</NavLink>
             <p>Hier Videos einfügen!</p>
           </div>
           </div>

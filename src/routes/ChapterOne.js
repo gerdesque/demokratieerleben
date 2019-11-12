@@ -1,5 +1,5 @@
 import React, { Component, lazy } from 'react';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './ChapterOne.css';
 import Rain from '../Rain';
 const Puzzle = lazy(() => import('../games/Puzzle'));

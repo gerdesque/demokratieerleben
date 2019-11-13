@@ -50,15 +50,15 @@
 
 .parallax__layer--left {
   background-size: contain;
-  height: 50%;
-  background-position: left 5% top;
+  height: 70vmin;
+  background-position: left 0 top;
   background-repeat: no-repeat;
 }
 
 .parallax__layer--right {
   background-size: contain;
-  height: 50%;
-  background-position: right 5% top;
+  height: 70vmin;
+  background-position: right 0 top;
   background-repeat: no-repeat;
 }
 
@@ -70,35 +70,35 @@
   transform: translate(-50%, -50%);
 }
 
-.title__white {
-  color: white;
-}
-
 .subtitle {
   font-family: CinnamonCake, arial, sans-serif;
-  font-weight: bold;
   text-align: center;
   position: absolute;
   left: 50%;
   top: 66%;
-  color: orange;
   transform: translate(-50%, -50%);
 }
 
 .box {
-  padding: 3%;
-  background: rgba(240, 230, 220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 100%;
   transform: translate(-50%, -50%);
-  width: 75%;
 }
 
-.box a {
-  margin-right: 10px;
+.decission {
+  top: 50%;
+}
+
+.decission a {
+  float: left;
+  margin-left: 25%;
+}
+
+.decission a:hover {
+  font-weight: bold;
+  color: #E3000F;
 }
 
 /* style header and chapter
@@ -110,11 +110,12 @@
 }
 
 #header .parallax__layer--base {
-  background-image: url(../assets/header.webp);
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url(../assets/header.webp);
+  box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
 .no-webp #header .parallax__layer--base {
-  background-image: url(../assets/fallback/header.png);
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url(../assets/fallback/header.png);
 }
 
 #group2 {
@@ -123,31 +124,42 @@
 }
 
 #group2 .parallax__layer--deep {
-  background-image: url(../assets/intro.webp);
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../assets/map.webp);
+  /* box-shadow: 0 0 8px 8px #c7bbb2 inset; */
 }
 
 .no-webp #group2 .parallax__layer--deep {
-  background-image: url(../assets/fallback/intro.png);
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../assets/fallback/map.png);
 }
 
 #group3 {
-  z-index: 4;
-  /* slide over group 2 and 4 */
+  z-index: 4; /* slide under group 3 and 5 */
 }
 
 #group3 .parallax__layer--base {
-  background-image: url(../assets/boy1.webp);
+  background-image: url(../assets/pit.webp);
 }
 
-.no-webp #group3 .parallax__layer--base {
-  background-image: url(../assets/fallback/boy1.png);
+.no-webp #group3 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../assets/fallback/pit.png);
 }
 
-#group3 .parallax__layer--back {
-  background-image: url(../assets/girl1.webp);
+#group4 {
+  z-index: 5; /* slide under group 3 and 5 */
 }
 
-.no-webp #group3 .parallax__layer--back {
-  background-image: url(../assets/fallback/girl2.png);
+#group4 .parallax__layer--base {
+  background-image: url(../assets/karl.webp);
 }
 
+.no-webp #group4 .parallax__layer--base {
+  background-image: url(../assets/fallback/karl.png);
+}
+
+#group4 .parallax__layer--back {
+  background-image: url(../assets/anna_highlighted.webp);
+}
+
+.no-webp #group4 .parallax__layer--back {
+  background-image: url(../assets/fallback/anna_highlighted.png);
+}

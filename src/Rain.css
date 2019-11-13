@@ -1,9 +1,13 @@
 
 .rain {
   height: 100%;
-  background: url(./assets/rain.png);
+  background: url(./assets/rain.webp);
   animation: rain .3s linear 40;
   animation-fill-mode: forwards;
+}
+
+ .no-webp .rain {
+  background: url(./assets/fallback/rain.png);
 }
 
 .rain:before {

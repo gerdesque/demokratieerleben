@@ -136,19 +136,19 @@
 }
 
 #group3 .parallax__layer--base {
-  background-image: url(../assets/boy1.webp);
+  background-image: url(../assets/karl.webp);
 }
 
 .no-webp #group3 .parallax__layer--base {
-  background-image: url(../assets/fallback/boy1.png);
+  background-image: url(../assets/fallback/karl.png);
 }
 
 #group3 .parallax__layer--back {
-  background-image: url(../assets/girl1.webp);
+  background-image: url(../assets/anna_highlighted.webp);
 }
 
 .no-webp #group3 .parallax__layer--back {
-  background-image: url(../assets/fallback/girl1.png);
+  background-image: url(../assets/fallback/anna_highlighted.png);
 }
 
 #group5 {

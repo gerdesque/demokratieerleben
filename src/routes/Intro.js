@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import './Intro.css';
 import Birds from '../Birds';
 import FadeInSection from '../FadeInSection';
+import Smoke from '../Smoke';
 
 function Intro() {
   return (
@@ -26,9 +27,9 @@ function Intro() {
         </div>
         <div id="group3" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
+            <Smoke />
             <div className="box"><p>Anna und Karl machen sich Gedanken über ihre Zukunft, denn sie sind 13 Jahre alt und ihr letztes Schuljahr steht bald bevor. Begleite sie dabei, wie sie ihren Weg zu einer „Kinderrepublik“ der sozialistischen Arbeiterjugend finden und was sie dort erleben.</p></div>
           </div>
-          <div className="parallax__layer parallax__layer--deep"></div>
         </div>
         <div id="group4" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">

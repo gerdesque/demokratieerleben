@@ -1,10 +1,7 @@
 .smoke {
   position: absolute;
-  z-index: 3;
-  width: 1px;
-  height: 160px;
-  left: 96%;
-  top: -60px;
+  right: 12%;
+  top: 14%;
 }
 
 .smoke span {

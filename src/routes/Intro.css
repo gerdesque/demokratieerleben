@@ -125,7 +125,7 @@
 
 #group2 .parallax__layer--deep {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/map.webp);
-  /* box-shadow: 0 0 8px 8px #c7bbb2 inset; */
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
 .no-webp #group2 .parallax__layer--deep {
@@ -139,6 +139,8 @@
 
 #group3 .parallax__layer--base {
   background-image: url(../assets/pit_without_smoke.webp);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .no-webp #group3 .parallax__layer--base {

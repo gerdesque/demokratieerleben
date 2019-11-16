@@ -137,16 +137,6 @@
   /* slide under group 3 and 5 */
 }
 
-#group3 .parallax__layer--base {
-  background-image: url(../assets/pit_without_smoke.webp);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
-.no-webp #group3 .parallax__layer--base {
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/pit_without_smoke.png);
-}
-
 #group4 {
   z-index: 5;
   /* slide under group 3 and 5 */

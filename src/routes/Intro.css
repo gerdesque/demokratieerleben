@@ -50,14 +50,14 @@
 
 .parallax__layer--left {
   background-size: contain;
-  height: 70vmin;
+  height: 60vmin;
   background-position: left 0 top;
   background-repeat: no-repeat;
 }
 
 .parallax__layer--right {
   background-size: contain;
-  height: 70vmin;
+  height: 60vmin;
   background-position: right 0 top;
   background-repeat: no-repeat;
 }
@@ -83,11 +83,11 @@
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 100%;
+  top: 75%;
   transform: translate(-50%, -50%);
 }
 
-.decission {
+.box.decission {
   top: 50%;
 }
 
@@ -140,20 +140,33 @@
 #group4 {
   z-index: 5;
   /* slide under group 3 and 5 */
+  display: flex;
 }
 
-#group4 .parallax__layer--base {
+#group4 .parallax__layer--left {
   background-image: url(../assets/karl.webp);
 }
 
-.no-webp #group4 .parallax__layer--base {
+.fade-in-left, .fade-in-right {
+  flex: 50%;
+  margin-top: 15%;
+}
+
+.no-webp #group4 .parallax__layer--left {
   background-image: url(../assets/fallback/karl.png);
 }
 
-#group4 .parallax__layer--back {
+#group4 .parallax__layer--right {
   background-image: url(../assets/anna_highlighted.webp);
+  flex: 50%;
 }
 
-.no-webp #group4 .parallax__layer--back {
+.no-webp #group4 .parallax__layer--right {
   background-image: url(../assets/fallback/anna_highlighted.png);
+}
+
+@media (min-width: 600px) {
+  .box {
+    top: 100%;
+  }
 }

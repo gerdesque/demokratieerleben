@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/demokratieerleben/static/css/main.f6fba6a9.chunk.css",
-    "main.js": "/demokratieerleben/static/js/main.88946e55.chunk.js",
-    "main.js.map": "/demokratieerleben/static/js/main.88946e55.chunk.js.map",
+    "main.css": "/demokratieerleben/static/css/main.07d1cbb4.chunk.css",
+    "main.js": "/demokratieerleben/static/js/main.8852d537.chunk.js",
+    "main.js.map": "/demokratieerleben/static/js/main.8852d537.chunk.js.map",
     "runtime-main.js": "/demokratieerleben/static/js/runtime-main.c4284f56.js",
     "runtime-main.js.map": "/demokratieerleben/static/js/runtime-main.c4284f56.js.map",
     "static/css/2.5fddad40.chunk.css": "/demokratieerleben/static/css/2.5fddad40.chunk.css",
@@ -17,12 +17,12 @@
     "static/js/5.d31bd5d5.chunk.js": "/demokratieerleben/static/js/5.d31bd5d5.chunk.js",
     "static/js/5.d31bd5d5.chunk.js.map": "/demokratieerleben/static/js/5.d31bd5d5.chunk.js.map",
     "index.html": "/demokratieerleben/index.html",
-    "precache-manifest.4976e2641948a115b2463b62f0e9971a.js": "/demokratieerleben/precache-manifest.4976e2641948a115b2463b62f0e9971a.js",
+    "precache-manifest.2ddca342d16b04ecb7b8ecb7410f6501.js": "/demokratieerleben/precache-manifest.2ddca342d16b04ecb7b8ecb7410f6501.js",
     "service-worker.js": "/demokratieerleben/service-worker.js",
     "static/css/2.5fddad40.chunk.css.map": "/demokratieerleben/static/css/2.5fddad40.chunk.css.map",
     "static/css/4.ee998742.chunk.css.map": "/demokratieerleben/static/css/4.ee998742.chunk.css.map",
     "static/css/5.4718a5ad.chunk.css.map": "/demokratieerleben/static/css/5.4718a5ad.chunk.css.map",
-    "static/css/main.f6fba6a9.chunk.css.map": "/demokratieerleben/static/css/main.f6fba6a9.chunk.css.map",
+    "static/css/main.07d1cbb4.chunk.css.map": "/demokratieerleben/static/css/main.07d1cbb4.chunk.css.map",
     "static/media/App.css": "/demokratieerleben/static/media/background.c4de226b.jpg",
     "static/media/anna_highlighted.webp": "/demokratieerleben/static/media/anna_highlighted.7bbd227e.webp",
     "static/media/anna_highlighted.png": "/demokratieerleben/static/media/anna_highlighted.c704e507.png",
@@ -100,7 +100,7 @@
   "entrypoints": [
     "static/js/runtime-main.c4284f56.js",
     "static/js/3.066eddf9.chunk.js",
-    "static/css/main.f6fba6a9.chunk.css",
-    "static/js/main.88946e55.chunk.js"
+    "static/css/main.07d1cbb4.chunk.css",
+    "static/js/main.8852d537.chunk.js"
   ]
 }

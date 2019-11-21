@@ -1,7 +1,7 @@
 import React from 'react';
 import './SmokingPit.css';
-import PitWebp from './assets/pit_without_smoke.webp';
-import PitPng from './assets/fallback/pit_without_smoke.png';
+import PitWebp from '../assets/pit_without_smoke.webp';
+import PitPng from '../assets/fallback/pit_without_smoke.png';
 
 function SmokingPit() {
   return (

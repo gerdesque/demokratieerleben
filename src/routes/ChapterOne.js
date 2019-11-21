@@ -1,7 +1,7 @@
 import React, { Component, lazy } from 'react';
 import {NavLink} from "react-router-dom";
 import './ChapterOne.css';
-import Rain from '../Rain';
+import Rain from '../effects/Rain';
 const Puzzle = lazy(() => import('../games/Puzzle'));
 
 class groupOne extends Component {

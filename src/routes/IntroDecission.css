@@ -1,0 +1,63 @@
+.decission {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  margin: 3em;
+}
+
+.intro {
+  margin: 0 5em;
+}
+
+.aside-left {
+  /* put the nav on the left */
+  order: -1;
+}
+
+.aside-left img, .aside-right img {
+  height: 60vmin; 
+}
+
+.aside-left.Karl img, .aside-right.Anna img {
+  height: 75vmin;
+}
+
+.aside-left.Anna, .aside-right.Karl img {
+  display: none;
+}
+
+.intro, .main {
+  text-align: center;
+}
+
+.decission a:hover {
+  font-weight: bold;
+  color: #E3000F;
+}
+
+.link-button {
+  background-color: transparent;
+  text-decoration: none;
+  color: mediumblue;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  margin-right: 5%;
+  padding: 0;
+  font-size: calc(10px + 2vmin);
+  line-height: 1.6;
+}
+
+.link-button:hover,
+.link-button:focus {
+  font-weight: bold;
+  color: #E3000F;
+}

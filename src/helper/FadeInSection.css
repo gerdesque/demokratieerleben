@@ -1,6 +1,6 @@
 .fade-in-left {
   opacity: 0;
-  transform: translateX(-33vh);
+  transform: translateX(-33px);
   visibility: hidden;
   transition: opacity 1000ms ease-out, transform 1000ms ease-out,
     visibility 1000ms ease-out;
@@ -19,9 +19,9 @@
   height: 100%;
 }
 
-.fade-in-right {
+.fade-in-top {
   opacity: 0;
-  transform: translateX(33vh);
+  transform: translateY(-33vh);
   visibility: hidden;
   transition: opacity 1000ms ease-out, transform 1000ms ease-out,
     visibility 1000ms ease-out;
@@ -29,7 +29,17 @@
   height: 100%;
 }
 
-.fade-in-left.is-visible, .fade-in-bottom.is-visible, .fade-in-right.is-visible {
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(33px);
+  visibility: hidden;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
+    visibility 1000ms ease-out;
+  will-change: opacity, transform, visibility;
+  height: 100%;
+}
+
+.fade-in-left.is-visible, .fade-in-bottom.is-visible, .fade-in-top.is-visible, .fade-in-right.is-visible {
   opacity: 1;
   transform: none;
   visibility: visible;

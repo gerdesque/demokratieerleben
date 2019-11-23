@@ -10,7 +10,7 @@ function Intro() {
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
-              <h1 className="title__white">Demokratie <i>er</i>leben</h1>
+              <h1>Demokratie <i>er</i>leben</h1>
               <Birds/>
             </div>
           </div>

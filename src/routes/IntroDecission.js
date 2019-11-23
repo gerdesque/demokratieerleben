@@ -11,7 +11,8 @@ class IntroDecission extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      introText: "",
+      avatar: "",
+      family: "",
       videoSrc: require('../assets/movies/Anna_Vater.mp4'),
       hasVideoStarted: false,
       hasVideoStopped: false
@@ -19,9 +20,8 @@ class IntroDecission extends Component {
   }
 
 playVideo = (value) => {
-  this.setState({videoSrc: require(`../assets/movies/${this.state.introText}_${value}.mp4`), hasVideoStarted: true});
+  this.setState({videoSrc: require(`../assets/movies/${this.state.avatar}_${value}.mp4`), family: value, hasVideoStarted: true});
   setTimeout(() => {this.refs.vidRef.play()},1000);
-  // this.refs.vidRef.play();
 }
 
 pauseVideo = () => {
@@ -30,28 +30,28 @@ pauseVideo = () => {
 
 render = () => {
   return (
-    <div className={`decission ${this.state.introText}`}>
-      <div className="intro"><p>{this.state.introText === "" ? textDefault : this.state.introText === "Anna" ? textAnna : textKarl}</p></div>
+    <div className={`decission ${this.state.avatar}`}>
+      <div className="intro"><p>{this.state.avatar === "" ? textDefault : this.state.avatar === "Anna" ? textAnna : textKarl}</p></div>
       <div className="main">
-        {this.state.introText === "" &&
+        {this.state.avatar === "" &&
           <FadeInSection direction="bottom">
             <p>Wen möchtest du auf diesem Weg begleiten?</p>
-            <button type="button" className="link-button" onClick={() => this.setState({introText: "Karl"})}>Karl</button>
-            <button type="button" className="link-button" onClick={() => this.setState({introText: "Anna"})}>Anna</button>
+            <button type="button" className="link-button" onClick={() => this.setState({avatar: "Karl"})}>Karl</button>
+            <button type="button" className="link-button" onClick={() => this.setState({avatar: "Anna"})}>Anna</button>
           </FadeInSection>}
             {!this.state.hasVideoStarted && <div className="main-overlay">
-              {this.state.introText === "Anna" && <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>}
-              {this.state.introText === "Karl" && <p>Karl macht sich Gedanken um seine Zukunft. Mit wem soll er darüber sprechen?</p>}
-              {this.state.introText !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Vater")}>Vater</button>}
-              {this.state.introText !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Mutter")}>Mutter</button>}
-              {this.state.introText === "Anna" && <button type="button" className="link-button" onClick={() => this.playVideo("Großvater")}>Großvater</button>}
-              {this.state.introText === "Karl" && <button type="button" className="link-button" onClick={() => this.playVideo("Großmutter")}>Großmutter</button>}
+              {this.state.avatar === "Anna" && <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>}
+              {this.state.avatar === "Karl" && <p>Karl macht sich Gedanken um seine Zukunft. Mit wem soll er darüber sprechen?</p>}
+              {this.state.avatar !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Vater")}>Vater</button>}
+              {this.state.avatar !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Mutter")}>Mutter</button>}
+              {this.state.avatar === "Anna" && <button type="button" className="link-button" onClick={() => this.playVideo("Großvater")}>Großvater</button>}
+              {this.state.avatar === "Karl" && <button type="button" className="link-button" onClick={() => this.playVideo("Großmutter")}>Großmutter</button>}
             </div>}
-            {this.state.introText !== "" && <video ref="vidRef" key={this.state.videoSrc} poster={require('../assets/poster_intro.webp')} onPause={this.pauseVideo}>
+            {this.state.avatar !== "" && <video ref="vidRef" key={this.state.videoSrc} poster={require('../assets/poster_intro.webp')} onPause={this.pauseVideo}>
               <source type="video/mp4" src={this.state.videoSrc}></source>
               Your browser does not support the video tag.
             </video>}
-            {this.state.hasVideoStopped && <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.introText } }} />}
+            {this.state.hasVideoStopped && <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.avatar, family: this.state.family } }} />}
         </div>
         <div className="aside aside-left">
           <FadeInSection direction="left">

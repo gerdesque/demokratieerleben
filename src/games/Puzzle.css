@@ -1,5 +1,10 @@
 .puzzle{
-  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+  
+.puzzle > * {
+  flex: 1 50%;
 }
 
 .puzzle__solved-board{
@@ -20,9 +25,8 @@
 
 .puzzle__solved-board,
 .puzzle__shuffled-board{
-  margin: 20px auto;
-  width: 400px;
-  list-style-type: none;
+  margin: 5px auto;
+  max-width: 320px;
   padding: 0;
   font-size: 0;
   border: 1px solid #DDD;
@@ -30,11 +34,11 @@
 }
 
 .puzzle li{
+  width: 79px;
+  height: 79px;
   position: relative;
   text-align: left;
   display: inline-block; 
-  width: 99px;
-  height: 99px;
   border: 1px solid #DDD;
   border-width: 0 1px 1px 0;
 }
@@ -44,9 +48,9 @@
 }
 
 .puzzle li img{
-  width: 100px;
-  height: 100px;
   position: absolute;
+  width: 80px;
+  height: 80px;
   cursor: grab;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
@@ -55,4 +59,21 @@
   z-index: 2;
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 600px) {
+  .puzzle__solved-board,
+  .puzzle__shuffled-board{
+    max-width: 520px;
+  }
+  
+  .puzzle li{
+    width: 129px;
+    height: 129px;
+  }
+
+  .puzzle li img{
+    width: 130px;
+    height: 130px;
+  }
 }

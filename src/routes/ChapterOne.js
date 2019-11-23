@@ -48,7 +48,7 @@ class ChapterOne extends Component {
         </div>
         <div id="group4" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-            <Puzzle />
+            <Puzzle onCheckBoard={setTimeout(() => this.setState({hasPuzzleSolved: true}),2000)}/>
             {this.state.hasPuzzleSolved && <Redirect exact to={{ pathname: "/chaptertwo", state: { ...this.state } }} />}
           </div>
         </div>

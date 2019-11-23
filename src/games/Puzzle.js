@@ -6,7 +6,8 @@ class Puzzle extends Component {
   state = {
     pieces: [],
     shuffled: [],
-    solved: []
+    solved: [],
+    hasSolved: false
   };
 
   componentDidMount() {
@@ -26,6 +27,15 @@ class Puzzle extends Component {
     });
   }
 
+  checkBoard() {
+    for (let i = 0; i < this.state.solved.length; i++) {
+      if (this.state.solved[i] === undefined) {
+        return false;
+      }
+    }
+    this.props.onCheckBoard(true);
+  }
+
   handleDrop(e, index, targetName) {
     let target = this.state[targetName];
     if (target[index]) return;
@@ -39,7 +49,7 @@ class Puzzle extends Component {
     target[index] = pieceData;
     pieceData.board = targetName;
 
-    this.setState({ [pieceData.board]: origin, [targetName]: target })
+    this.setState({ [pieceData.board]: origin, [targetName]: target, hasSolved: this.checkBoard() })
   }
 
   handleDragStart(e, order) {

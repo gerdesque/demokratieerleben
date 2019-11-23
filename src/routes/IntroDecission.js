@@ -35,7 +35,7 @@ render = () => {
   return (
     <div className="decission">
       <div className="intro"><p>{this.state.introText === "" ? textDefault : this.state.introText === "Anna" ? textAnna : textKarl}</p></div>
-      <div className="body">
+      <div className={`body ${this.state.introText}`}>
       <div className="main">
         {this.state.introText === "" &&
           <FadeInSection direction="bottom">
@@ -59,7 +59,7 @@ render = () => {
             {this.state.hasVideoStopped && <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.introText } }} />}
           </FadeInSection>
         </div>
-        <div className={`aside-left ${this.state.introText}`}>
+        <div className="aside-left">
           <FadeInSection direction="right">
             <picture>
               <source srcSet={KarlWebp} type="image/webp"/>
@@ -68,14 +68,14 @@ render = () => {
             </picture>
           </FadeInSection>
         </div>
-        <div className={`aside-right ${this.state.introText}`}>
-          <FadeInSection direction="right">
+        <div className="aside-right">
+          {/* <FadeInSection direction="right"> */}
             <picture>
               <source srcSet={AnnaWebp} type="image/webp"/>
               <source srcSet={AnnaPng} type="image/png"/>
               <img src={AnnaPng} alt="Smoking Pit"/>
             </picture>
-          </FadeInSection>
+          {/* </FadeInSection> */}
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, {Component, lazy} from 'react';
-import {NavLink} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import './IntroDecission.css';
 import KarlWebp from '../assets/karl.webp';
 import KarlPng from '../assets/fallback/karl.png';
@@ -16,17 +16,19 @@ class IntroDecission extends Component {
     super(props);
     this.state = {
       introText: "",
-      videoSrc: ""
+      videoSrc: require('../assets/movies/Anna_Vater.mp4'),
+      hasVideoStarted: false,
+      hasVideoStopped: false
     }
   }
 
 playVideo = (value) => {
-  // this.setState({videoSrc: value});
+  this.setState({videoSrc: require(`../assets/movies/${this.state.introText}_${value}.mp4`), hasVideoStarted: true});
   this.refs.vidRef.play();
 }
 
-pauseVideo = event => {
-  // https://reacttraining.com/react-router/web/api/Redirect
+pauseVideo = () => {
+  this.setState({hasVideoStopped: true});
 }
 
 render = () => {
@@ -41,39 +43,30 @@ render = () => {
             <button type="button" className="link-button" onClick={() => this.setState({introText: "Karl"})}>Karl</button>
             <button type="button" className="link-button" onClick={() => this.setState({introText: "Anna"})}>Anna</button>
           </FadeInSection>}
-        {this.state.introText === "Anna" && 
           <FadeInSection direction="top">
-            <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>
-            <button type="button" className="link-button" onClick={this.playVideo}>Vater</button>
-            <button type="button" className="link-button" onClick={this.playVideo}>Mutter</button>
-            <button type="button" className="link-button" onClick={this.playVideo}>Großvater</button>
-            <video ref="vidRef" poster={require('../assets/poster_intro.webp')} onPause={this.pauseVideo}>
-              <source type="video/mp4" src={require('../assets/movies/Anna_Vater.mp4')}></source>
+            {!this.state.hasVideoStarted && <div>
+              {this.state.introText === "Anna" && <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>}
+              {this.state.introText === "Karl" && <p>Karl macht sich Gedanken um ihre Zukunft. Mit wem soll er darüber sprechen?</p>}
+              {this.state.introText !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Vater")}>Vater</button>}
+              {this.state.introText !== "" && <button type="button" className="link-button" onClick={() => this.playVideo("Mutter")}>Mutter</button>}
+              {this.state.introText === "Anna" && <button type="button" className="link-button" onClick={() => this.playVideo("Großvater")}>Großvater</button>}
+              {this.state.introText === "Karl" && <button type="button" className="link-button" onClick={() => this.playVideo("Großmutter")}>Großmutter</button>}
+            </div>}
+            {this.state.introText !== "" && <video ref="vidRef" poster={require('../assets/poster_intro.webp')} onPause={this.pauseVideo}>
+              <source type="video/mp4" src={this.state.videoSrc}></source>
               Your browser does not support the video tag.
-            </video>
-          </FadeInSection>}
-        {this.state.introText === "Karl" &&
-          <FadeInSection direction="top">
-            <p>Karl macht sich Gedanken um ihre Zukunft. Mit wem soll er darüber sprechen?</p>
-            <button type="button" className="link-button" onClick={this.playVideo}>Vater</button>
-            <button type="button" className="link-button" onClick={this.playVideo}>Mutter</button>
-            <button type="button" className="link-button" onClick={this.playVideo}>Großmutter</button>
-            <video ref="vidRef" poster={require('../assets/poster_intro.webp')}>
-              <source type="video/mp4" src={require('../assets/movies/Anna_Vater.mp4')}></source>
-              Your browser does not support the video tag.
-            </video>
-          </FadeInSection>}
-            {/* <NavLink exact to={{ pathname: "/chapterone", state: { avatar: "Karl" } }}>Karl</NavLink>
-            <NavLink exact to={{ pathname: "/chapterone", state: { avatar: "Anna" } }}>Anna</NavLink> */}
+            </video>}
+            {this.state.hasVideoStopped && <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.introText } }} />}
+          </FadeInSection>
         </div>
         <div className={`aside-left ${this.state.introText}`}>
-          {/* <FadeInSection direction="left"> */}
+          <FadeInSection direction="right">
             <picture>
               <source srcSet={KarlWebp} type="image/webp"/>
               <source srcSet={KarlPng} type="image/png"/>
               <img src={KarlPng} alt="Smoking Pit"/>
             </picture>
-          {/* </FadeInSection> */}
+          </FadeInSection>
         </div>
         <div className={`aside-right ${this.state.introText}`}>
           <FadeInSection direction="right">

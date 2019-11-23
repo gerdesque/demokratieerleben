@@ -10,11 +10,9 @@
 
 .main {
   flex: 1;
-  margin: 3em;
 }
 
 .intro {
-  margin: 0 5em;
 }
 
 .aside-left {
@@ -36,6 +34,12 @@
 
 .intro, .main {
   text-align: center;
+  position: relative;
+}
+
+.intro p, .main p {
+  margin: 5em 5em 0;
+
 }
 
 .decission a:hover {
@@ -53,11 +57,29 @@
   margin-right: 5%;
   padding: 0;
   font-size: calc(10px + 2vmin);
+  font-family: FundamentalBrigade, arial, sans-serif;
+  font-weight: normal;
   line-height: 1.6;
+}
+
+.link-button:last-child {
+  margin-right: 0;
 }
 
 .link-button:hover,
 .link-button:focus {
   font-weight: bold;
   color: #E3000F;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width:100%;
+  min-height:100%;
+  width:100%;
+  height:auto;
+  z-index:-100;
 }

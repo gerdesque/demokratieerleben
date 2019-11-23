@@ -14,9 +14,6 @@ function Intro() {
               <Birds/>
             </div>
           </div>
-          <div className="parallax__layer parallax__layer--fore">
-            <div className="subtitle"><h2>Scrolle nach unten! &dArr;</h2></div>
-          </div>
         </div>
         <div id="group2" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">

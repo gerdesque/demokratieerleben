@@ -2,18 +2,19 @@
   opacity: 0;
   transform: translateX(-33vh);
   visibility: hidden;
-  transition: opacity 2000ms ease-out, transform 1000ms ease-out,
-    visibility 2000ms ease-out;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
+    visibility 1000ms ease-out;
   will-change: opacity, transform, visibility;
   height: 100%;
 }
+
 
 .fade-in-bottom {
   opacity: 0;
   transform: translateY(33vh);
   visibility: hidden;
-  transition: opacity 2000ms ease-out, transform 1000ms ease-out,
-    visibility 2000ms ease-out;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
+    visibility 1000ms ease-out;
   will-change: opacity, transform, visibility;
   height: 100%;
 }
@@ -22,8 +23,8 @@
   opacity: 0;
   transform: translateX(33vh);
   visibility: hidden;
-  transition: opacity 2000ms ease-out, transform 1000ms ease-out,
-    visibility 2000ms ease-out;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
+    visibility 1000ms ease-out;
   will-change: opacity, transform, visibility;
   height: 100%;
 }

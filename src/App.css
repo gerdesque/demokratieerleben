@@ -1,7 +1,13 @@
   @font-face {
-    font-family: 'CinnamonCake';
+    font-family: 'FundamentalBrigade';
     font-display: swap;
-    src: url('./assets/fonts/CinnamonCake.ttf') format('truetype');
+    src:  url('./assets/fonts/Fundamental_Brigade_Schlank.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LinolschriftHeavy';
+    font-display: swap;
+    src:  url('./assets/fonts/Linolschrift_Heavy.ttf') format('truetype');
   }
 
   html {
@@ -13,6 +19,8 @@
     background-image: url(./assets/background.webp);
     color: darkred;
     font-size: calc(10px + 2vmin);
+    font-family: FundamentalBrigade, arial, sans-serif;
+    font-weight: normal;
     height: 100%;
     line-height: 1.6;
     margin: 0;
@@ -32,10 +40,12 @@
 
   h1 {
     font-size: 4em;
+    font-weight: normal;
   }
 
   h2 {
     font-size: 2em;
+    font-weight: normal;
   }
 
   ol,ul {

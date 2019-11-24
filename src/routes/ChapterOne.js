@@ -22,6 +22,10 @@ class ChapterOne extends Component {
     };
   }
 
+  handleCheckBoard = (solved) => {
+    solved && setTimeout(() => this.setState({hasPuzzleSolved: true}),2000)
+  }
+
   render () {
     return (
       <div className="parallax">
@@ -48,7 +52,7 @@ class ChapterOne extends Component {
         </div>
         <div id="group4" className="parallax__group">
           <div className="parallax__layer parallax__layer--fore">
-            <Puzzle onCheckBoard={setTimeout(() => this.setState({hasPuzzleSolved: true}),2000)}/>
+            <Puzzle onCheckBoard={this.handleCheckBoard}/>
             {this.state.hasPuzzleSolved && <Redirect exact to={{ pathname: "/chaptertwo", state: { ...this.state } }} />}
           </div>
         </div>

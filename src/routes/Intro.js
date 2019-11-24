@@ -1,17 +1,34 @@
-import React, { lazy } from 'react';
+import React, { Component, lazy } from 'react';
 import './Intro.css';
 import Birds from '../effects/Birds';
+import FadeInSection from '../helper/FadeInSection';
 const SmokingPit = lazy(() => import('../effects/SmokingPit'));
 const IntroDecission = lazy(() => import('./IntroDecission'));
 
-function Intro() {
+class Intro extends Component {
+
+setBirdsRef = element => {
+    this.birds = element;
+  };
+
+stopAudio = (value) => {
+  value ? this.birds.pause() : this.birds.play();
+}
+
+render = () => {
   return (
       <div className="parallax">
         <div id="header" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
             <div className="title">
               <h1>Demokratie <i>er</i>leben</h1>
-              <Birds/>
+              <FadeInSection direction="title" onOutOfView={(value) => this.stopAudio(value)}>
+                <Birds/>
+                <audio ref={this.setBirdsRef} hidden loop>
+                  <source src={require('../assets/sounds/birds.mp3')} type="audio/mpeg"/>
+                  Your browser does not support the audio element.
+                </audio>
+              </FadeInSection>
             </div>
           </div>
         </div>
@@ -36,6 +53,7 @@ function Intro() {
         </div>
       </div>
   );
+}
 }
 
 export default Intro;

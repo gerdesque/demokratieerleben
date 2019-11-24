@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3486f7666e332ffd3ffd36dc832303a1",
+    "revision": "0a239f3898121ad346951e60e668f183",
     "url": "/demokratieerleben/index.html"
   },
   {
-    "revision": "263efc2b3cf0a8810b3f",
+    "revision": "296c573a9ffb77738016",
     "url": "/demokratieerleben/static/css/2.89926f25.chunk.css"
   },
   {
-    "revision": "ec925d64c759d0fbbf54",
-    "url": "/demokratieerleben/static/css/3.ffc221ef.chunk.css"
+    "revision": "efe2713a5f9e675b12db",
+    "url": "/demokratieerleben/static/css/3.e41a6279.chunk.css"
   },
   {
     "revision": "ed4ba6e2459ee1342a49",
@@ -28,11 +28,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/demokratieerleben/static/css/main.8a414952.chunk.css"
   },
   {
-    "revision": "263efc2b3cf0a8810b3f",
-    "url": "/demokratieerleben/static/js/2.dee4c64c.chunk.js"
+    "revision": "296c573a9ffb77738016",
+    "url": "/demokratieerleben/static/js/2.02055651.chunk.js"
   },
   {
-    "revision": "ec925d64c759d0fbbf54",
+    "revision": "efe2713a5f9e675b12db",
     "url": "/demokratieerleben/static/js/3.0c8dbd33.chunk.js"
   },
   {
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/demokratieerleben/static/js/main.b962ebf3.chunk.js"
   },
   {
-    "revision": "95c13d9c5217f62dbd72",
-    "url": "/demokratieerleben/static/js/runtime-main.140bbb11.js"
+    "revision": "8f567155ef8f0e4e747b",
+    "url": "/demokratieerleben/static/js/runtime-main.077f53b6.js"
   },
   {
     "revision": "81eb2957e965a76f2f3f7953bd149aff",

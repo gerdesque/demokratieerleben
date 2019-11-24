@@ -23,7 +23,8 @@ class Puzzle extends Component {
     this.setState({
       pieces,
       shuffled: this.shufflePieces(pieces),
-      solved: [...Array(16)]
+      solved: [...Array(16)],
+      hasSolved: false
     });
   }
 

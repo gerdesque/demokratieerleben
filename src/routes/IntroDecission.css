@@ -14,7 +14,7 @@
 .aside-right { order: 3; }
 
 .decission.Karl .intro { flex: 1 75%; }
-.decission.Karl .main { flex: 1 100%; padding: 0 3em;}
+.decission.Karl .main { flex: 1 100%; }
 .decission.Karl .aside-right { display: none; }
 .decission.Karl .intro { order: 2; }
 .decission.Karl .aside-left { order: 1; }
@@ -22,18 +22,18 @@
 
 .decission.Anna .intro { flex: 1 75%; }
 .decission.Anna .aside-left { display: none; }
-.decission.Anna .main { flex: 1 100%; padding: 0 3em;}
+.decission.Anna .main { flex: 1 100%; }
 .decission.Anna .intro { order: 1; }
 .decission.Anna .aside-right { order: 2; }
 .decission.Anna .main { order: 3; }
 
 .aside img {
   max-width: 100%;
-  height: auto;
+  max-height: 50vh;
 }
 
-.decission.Karl .aside img {
-  max-width: 75%;
+.aside-right img {
+  float: right;
 }
 
 .intro, .main {
@@ -41,24 +41,19 @@
 }
 
 .main {
-  display: inline-block;
   position: relative;
 }
 
 .main-overlay {
   position: absolute;
-  top: 0%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
 
-.intro p {
-  margin: 4em 4em 0;
-}
-
-.main p {
-  margin: 4em 0 0;
+.intro p, .main p {
+  margin: 4em 10px 0;
 }
 
 .decission a:hover {
@@ -95,5 +90,11 @@ video {
   width: 100%;
   height: 100%;
   max-width: 960px;
-  padding-bottom: 1%;
+}
+
+
+@media (min-width: 600px) {
+  video {
+    margin-bottom: -3em;
+  }
 }

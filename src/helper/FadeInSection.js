@@ -14,7 +14,7 @@ function FadeInSection(props) {
       });
     });
     observer.observe(domRef.current);
-  }, []);
+  });
   return (
     <div
       className={`fade-in-${props.direction} ${isVisible ? 'is-visible' : ''}`}

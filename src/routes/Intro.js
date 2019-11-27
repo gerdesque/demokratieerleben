@@ -4,6 +4,7 @@ import Birds from '../effects/Birds';
 import FadeInSection from '../helper/FadeInSection';
 const SmokingPit = lazy(() => import('../effects/SmokingPit'));
 const IntroDecission = lazy(() => import('./IntroDecission'));
+const introText = "Es ist 1927. Irgendwo im Ruhrgebiet leben zwei Kinder: Anna und Karl. Die Eltern der Beiden gehören zur großen Arbeiterschaft, die im Bergbau, in Webereien, Fabriken und Stahlwerken arbeiten.";
 
 class Intro extends Component {
 
@@ -34,7 +35,7 @@ render = () => {
         </div>
         <div id="group2" className="parallax__group">
           <div className="parallax__layer parallax__layer--base">
-            <div className="box"><p>Es ist 1927. Irgendwo im Ruhrgebiet leben zwei Kinder: Anna und Karl. Die Eltern der Beiden gehören zur großen Arbeiterschaft, die im Bergbau, in Webereien, Fabriken und Stahlwerken arbeiten.</p></div>
+            <div className="box"><p>{introText}</p></div>
           </div>
           <div className="parallax__layer parallax__layer--deep"></div>
         </div>

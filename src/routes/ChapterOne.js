@@ -22,12 +22,8 @@ class ChapterOne extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      avatar: this.props.location.state
-        ? this.props.location.state.avatar
-        : "Anna",
-      family: this.props.location.state
-        ? this.props.location.state.family
-        : "Mutter",
+      avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
+      family: this.props.location.state ? this.props.location.state.family : "Mutter",
       hasPuzzleSolved: false
     };
   }
@@ -45,18 +41,13 @@ class ChapterOne extends Component {
         </div>
         <div className='box'>
           <p>
-            Minigame als Puzzle um einen Stadtplan zu erhalten, bei korrekter
-            Lösung gelangt man zum nächsten Kapitel „Die Ortsgruppe“
+            Minigame als Puzzle um einen Stadtplan zu erhalten, bei korrekter Lösung gelangt man zum nächsten Kapitel
+            „Die Ortsgruppe“
           </p>
         </div>
         <>
           <Puzzle onCheckBoard={this.handleCheckBoard} />
-          {this.state.hasPuzzleSolved && (
-            <Redirect
-              exact
-              to={{ pathname: "/chaptertwo", state: { ...this.state } }}
-            />
-          )}
+          {this.state.hasPuzzleSolved && <Redirect exact to={{ pathname: "/chaptertwo", state: { ...this.state } }} />}
         </>
       </Chapter>
     );

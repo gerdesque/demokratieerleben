@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import './TicTacToe.css';
+import "./TicTacToe.css";
 
 function Square({ value, onClick }) {
   return (
-    <button className="square" onClick={onClick}>{value}</button>
+    <button className='square' onClick={onClick}>
+      {value}
+    </button>
   );
 }
 
 function TicTacToe() {
-  const [ squares, setSquares ] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState(Array(9).fill(null));
   const winner = calculateWinner(squares);
   const userSymbol = "X";
   const computerSymbol = "O";
@@ -51,20 +53,22 @@ function TicTacToe() {
   }
 
   return (
-      <div className="game">
-        <div className="game-info"><h2>{getStatus()}</h2></div>
-        <div className="game-board">
-            {renderSquare(0)}
-            {renderSquare(1)}
-            {renderSquare(2)}
-            {renderSquare(3)}
-            {renderSquare(4)}
-            {renderSquare(5)}
-            {renderSquare(6)}
-            {renderSquare(7)}
-            {renderSquare(8)}
-        </div>
+    <div className='game'>
+      <div className='game-info'>
+        <h2>{getStatus()}</h2>
       </div>
+      <div className='game-board'>
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
   );
 }
 

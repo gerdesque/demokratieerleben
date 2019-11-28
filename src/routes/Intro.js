@@ -20,19 +20,13 @@ class Intro extends Component {
   render = () => {
     return (
       <Chapter>
-        <FadeInSection
-          direction='title'
-          onOutOfView={value => this.stopAudio(value)}
-        >
+        <FadeInSection direction='title' onOutOfView={value => this.stopAudio(value)}>
           <h1>
             Demokratie <i>er</i>leben
           </h1>
           <Birds />
           <audio ref={this.setBirdsRef} hidden loop>
-            <source
-              src={require("../assets/sounds/birds.mp3")}
-              type='audio/mpeg'
-            />
+            <source src={require("../assets/sounds/birds.mp3")} type='audio/mpeg' />
             Your browser does not support the audio element.
           </audio>
         </FadeInSection>

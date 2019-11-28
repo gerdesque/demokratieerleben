@@ -25,12 +25,8 @@ class ChapterTwo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      avatar: this.props.location.state
-        ? this.props.location.state.avatar
-        : "Anna",
-      family: this.props.location.state
-        ? this.props.location.state.family
-        : "Mutter"
+      avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
+      family: this.props.location.state ? this.props.location.state.family : "Mutter"
     };
   }
 
@@ -51,15 +47,8 @@ class ChapterTwo extends Component {
         <div className='box'>
           <p>{text[this.state.avatar + "Ortsgruppe2"]}</p>
           <button onClick={this.playVideo}>Play!</button>
-          <video
-            ref='two'
-            key={this.state.avatar}
-            poster={require("../assets/poster_intro.webp")}
-          >
-            <source
-              type='video/mp4'
-              src={require(`../assets/movies/${this.state.avatar}_Ortsgruppe.mp4`)}
-            ></source>
+          <video ref='two' key={this.state.avatar} poster={require("../assets/poster_intro.webp")}>
+            <source type='video/mp4' src={require(`../assets/movies/${this.state.avatar}_Ortsgruppe.mp4`)}></source>
             Your browser does not support the video tag.
           </video>
         </div>
@@ -74,8 +63,7 @@ class ChapterTwo extends Component {
         </div>
         <div className='box'>
           <p>
-            Bald geht es los ins Zeltlager Seekamp! Anna muss ihre Sachen
-            zusammensuchen. Hilf ihr den Koffer zu packen!
+            Bald geht es los ins Zeltlager Seekamp! Anna muss ihre Sachen zusammensuchen. Hilf ihr den Koffer zu packen!
           </p>
           <p>Hier Spiel einfügen! Spiel gelöst leitet zum nächsten Kapitel</p>
         </div>

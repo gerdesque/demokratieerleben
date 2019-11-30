@@ -38,38 +38,53 @@ class IntroDecission extends Component {
 
   render = () => {
     const avatars = ["Karl", "Anna"];
+    const isDefault = this.state.avatar === "Default";
+    const isAnna = this.state.avatar === "Anna";
+    const isKarl = this.state.avatar === "Karl";
+
+    const defaultText = 
+      <FadeInSection direction='bottom'>
+        <p>Wen möchtest du auf diesem Weg begleiten?</p>
+        {avatars.map((avatar) =>
+          <button type='button' className='link-button' key={avatar} onClick={() => this.setState({ avatar: avatar })}>{avatar}</button>)}
+      </FadeInSection>
+
+    const overlayText = 
+      !this.state.hasVideoStarted &&
+        <div className='main-overlay'>
+          {isAnna && <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>}
+          {isKarl && <p>Karl macht sich Gedanken um seine Zukunft. Mit wem soll er darüber sprechen?</p>}
+          {!isDefault && (
+            <>
+              <button type='button' className='link-button' onClick={() => this.playVideo("Vater")}>Vater</button>
+              <button type='button' className='link-button' onClick={() => this.playVideo("Mutter")}>Mutter</button>
+            </>)}
+          {isAnna && (<button type='button' className='link-button' onClick={() => this.playVideo("Großvater")}>Großvater</button>)}
+          {isKarl && (<button type='button' className='link-button' onClick={() => this.playVideo("Großmutter")}>Großmutter</button>)}
+        </div>
+
+    const mainText = isDefault ? defaultText : overlayText
+    
+    const video = !isDefault && (
+      <video ref='vidRef' key={this.state.videoSrc} poster={require("../assets/poster_intro.webp")} onPause={this.pauseVideo}>
+        <source type='video/mp4' src={this.state.videoSrc}></source>
+        Your browser does not support the video tag.
+      </video>
+    )
+
+    const redirect = this.state.hasVideoStopped && (
+      <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.avatar, family: this.state.family } }} />
+    )
+
     return (
       <div className={`decission ${this.state.avatar}`}>
         <div className='intro'>
           <p>{text[this.state.avatar]}</p>
         </div>
         <div className='main'>
-          {this.state.avatar === "Default" && (
-            <FadeInSection direction='bottom'>
-              <p>Wen möchtest du auf diesem Weg begleiten?</p>
-              {avatars.map((avatar) =>
-                <button type='button' className='link-button' key={avatar} onClick={() => this.setState({ avatar: avatar })}>{avatar}</button>)}
-            </FadeInSection>
-          )}
-          {!this.state.hasVideoStarted && (
-            <div className='main-overlay'>
-              {this.state.avatar === "Anna" && <p>Anna macht sich Gedanken um ihre Zukunft. Mit wem soll sie darüber sprechen?</p>}
-              {this.state.avatar === "Karl" && <p>Karl macht sich Gedanken um seine Zukunft. Mit wem soll er darüber sprechen?</p>}
-              {this.state.avatar !== "Default" && (<button type='button' className='link-button' onClick={() => this.playVideo("Vater")}>Vater</button>)}
-              {this.state.avatar !== "Default" && (<button type='button' className='link-button' onClick={() => this.playVideo("Mutter")}>Mutter</button>)}
-              {this.state.avatar === "Anna" && (<button type='button' className='link-button' onClick={() => this.playVideo("Großvater")}>Großvater</button>)}
-              {this.state.avatar === "Karl" && (<button type='button' className='link-button' onClick={() => this.playVideo("Großmutter")}>Großmutter</button>)}
-            </div>
-          )}
-          {this.state.avatar !== "" && (
-            <video ref='vidRef' key={this.state.videoSrc} poster={require("../assets/poster_intro.webp")} onPause={this.pauseVideo}>
-              <source type='video/mp4' src={this.state.videoSrc}></source>
-              Your browser does not support the video tag.
-            </video>
-          )}
-          {this.state.hasVideoStopped && (
-            <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.avatar, family: this.state.family } }} />
-          )}
+          {mainText}
+          {video}
+          {redirect}
         </div>
         <div className='aside aside-left'>
           <FadingImage direction='left' source='karl' />

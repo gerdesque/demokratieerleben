@@ -1,16 +1,11 @@
 import React from "react";
 import "./SmokingPit.css";
-import PitWebp from "../assets/pit_without_smoke.webp";
-import PitPng from "../assets/fallback/pit_without_smoke.png";
+import FadingImage from "../helper/FadingImage";
 
 function SmokingPit() {
   return (
     <div className='smokingPit'>
-      <picture>
-        <source srcSet={PitWebp} type='image/webp' />
-        <source srcSet={PitPng} type='image/png' />
-        <img src={PitPng} alt='Smoking Pit' />
-      </picture>
+      <FadingImage direction='pit_without_smoke' source='pit_without_smoke' />
       <div className='smoke'>
         <span className='s0'></span>
         <span className='s1'></span>

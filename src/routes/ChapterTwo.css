@@ -21,12 +21,17 @@
   /* slide over group 2 and 4 */
 }
 
+#group3 .parallax__layer--back {
+  background-image: none;
+  box-shadow: none;
+}
+
 #group5 .parallax__layer--base {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/participants.webp);
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
-.no-webp #group4 .parallax__layer--deep {
+.no-webp #group5 .parallax__layer--base {
   background-image: url(../assets/fallback/participants.png);
 }
 

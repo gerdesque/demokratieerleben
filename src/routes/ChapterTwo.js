@@ -47,7 +47,9 @@ class ChapterTwo extends Component {
         <div className='box column'>
           <p>{text[this.state.avatar + "Ortsgruppe4"]}</p>
         </div>
-        <p>Hier Spiel einfügen!</p>
+        <div className='box column'>
+          <p>Hier Spiel einfügen!</p>
+        </div>
       </Chapter>
     );
   }

@@ -17,18 +17,23 @@
   /* slide under groups 1 and 3 */
 }
 
-#group2 .parallax__layer--back {
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/map.webp);
-  box-shadow: 0 0 8px 8px #c7bbb2 inset;
-}
-
-.no-webp #group2 .parallax__layer--back {
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/map.png);
+#group2 .parallax__layer--deep {
+  background-image: none;
+  box-shadow: none;
 }
 
 #group3 {
-  z-index: 4;
+  z-index: 2;
   /* slide under group 3 and 5 */
+}
+
+#group3 .parallax__layer--back {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/way.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.no-webp #group2 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/way.png);
 }
 
 #group4 {

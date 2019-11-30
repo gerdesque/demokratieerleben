@@ -65,3 +65,28 @@
     font-size: 1.2em;
     line-height: 1.6;
   }
+
+  .link-button {
+    background-color: transparent;
+    text-decoration: none;
+    color: mediumblue;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin-right: 5%;
+    padding: 0;
+    font-size: calc(10px + 2vmin);
+    font-family: FundamentalBrigade, arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+  
+  .link-button:last-child {
+    margin-right: 0;
+  }
+  
+  .link-button:hover,
+  .link-button:focus {
+    font-weight: bold;
+    color: #E3000F;
+  }

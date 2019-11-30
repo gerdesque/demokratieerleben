@@ -64,6 +64,7 @@ class Puzzle extends Component {
         <ol className='puzzle__solved-board' style={{ backgroundImage: `url(${originalImage})` }}>
           {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, "solved"))}
         </ol>
+        <button type='button' className='link-button' onClick={() => this.props.onCheckBoard(true)}>Ohne Puzzle zum nächsten Kapitel "Die Ortsgruppe"</button>
       </div>
     );
   }

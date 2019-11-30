@@ -1,4 +1,5 @@
 import React, { Component, lazy } from "react";
+import { Redirect } from "react-router-dom";
 import "./ChapterTwo.css";
 import FadingImage from "../helper/FadingImage";
 import Chapter from "../helper/Chapter";
@@ -19,12 +20,17 @@ class ChapterTwo extends Component {
     super(props);
     this.state = {
       avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
-      family: this.props.location.state ? this.props.location.state.family : "Mutter"
+      family: this.props.location.state ? this.props.location.state.family : "Mutter",
+      hasGameSolved: false
     };
   }
 
   pauseVideo = () => {
     document.querySelector('#group4').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  checkGameState = solved => {
+    solved && setTimeout(() => this.setState({ hasGameSolved: true }), 2000);
   };
 
   render() {
@@ -48,7 +54,8 @@ class ChapterTwo extends Component {
           <p>{text[this.state.avatar + "Ortsgruppe4"]}</p>
         </div>
         <div className='box column'>
-          <p>Hier Spiel einfügen!</p>
+          <button type='button' className='link-button' onClick={() => this.setState({hasGameSolved: true})}>Hier Spiel einfügen!</button>
+          {this.state.hasGameSolved && <Redirect exact to={{ pathname: "/chapterthree", state: { ...this.state } }} />}
         </div>
       </Chapter>
     );

@@ -4,7 +4,7 @@ import "./Chapter.css";
 class Chapter extends Component {
   render() {
     return (
-      <div className='parallax'>
+      <div className={`parallax ${this.props.class}`}>
         {this.props.children[0] && (
           <div id='header' className='parallax__group'>
             <div className='parallax__layer parallax__layer--base'>

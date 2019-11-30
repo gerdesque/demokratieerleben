@@ -1,0 +1,62 @@
+.three #header {
+  z-index: 5;
+  /* slide over group 2 */
+}
+
+.three #header .parallax__layer--base {
+  background-image: url(../assets/train.webp);
+  box-shadow: 0 0 8px 8px #dcd5cc inset;
+}
+
+.three .no-webp #header .parallax__layer--base {
+  background-image: url(../assets/fallback/train.png);
+}
+
+.three #group2 {
+  z-index: 3;
+  /* slide under groups 1 and 3 */
+}
+
+.three #group3 {
+  z-index: 4;
+  /* slide over group 2 and 4 */
+}
+
+.three #group3 .parallax__layer--back {
+  background-image: none;
+  box-shadow: none;
+}
+
+.three #group5 {
+  z-index: 3;
+}
+
+.three #group6 {
+  z-index: 2;
+}
+
+.three #group6 .parallax__layer--base {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/ship.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.three .no-webp #group6 .parallax__layer--base {
+  background-image: url(../assets/fallback/ship.png);
+}
+/*
+.three #group6 .parallax__layer--back {
+  background-image: url(../assets/tent_rules.webp);
+}
+
+.three .no-webp #group6 .parallax__layer--back {
+  background-image: url(../assets/fallback/tent_rules.png);
+}
+*/
+
+.three .margin p {
+  margin: 1vw;
+}
+
+.three .margin img {
+  width: 100vw;
+}

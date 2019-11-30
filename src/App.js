@@ -5,6 +5,7 @@ import Nav from "./helper/Nav";
 import Intro from "./routes/Intro";
 const ChapterOne = lazy(() => import("./routes/ChapterOne"));
 const ChapterTwo = lazy(() => import("./routes/ChapterTwo"));
+const ChapterThree = lazy(() => import("./routes/ChapterThree"));
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route exact path='/' component={Intro} />
             <Route path='/chapterone' component={ChapterOne} />
             <Route path='/chaptertwo' component={ChapterTwo} />
+            <Route path='/chapterthree' component={ChapterThree} />
           </Switch>
         </Suspense>
       </div>

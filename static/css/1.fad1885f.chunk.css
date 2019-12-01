@@ -1,0 +1,2 @@
+.game-info{margin-bottom:20px;text-align:center}.game-board{display:flex;flex-wrap:wrap;margin:auto;max-width:50vw}.square{background:#d2691e;box-shadow:0 0 1px rgba(0,0,0,.7);font-size:2em;font-weight:700;line-height:1.5;width:33%}.square:before{content:"";float:left;padding-top:100%}.square:hover{-webkit-transition:background-color .5s ease;transition:background-color .5s ease;background-color:rgba(240,230,220,.7);cursor:pointer}.square:focus{outline:none}
+/*# sourceMappingURL=1.fad1885f.chunk.css.map */

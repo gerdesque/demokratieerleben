@@ -23,8 +23,11 @@
 }
 
 .food #group3 .parallax__layer--back {
-  background-image: none;
-  box-shadow: none;
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/letter.webp);
+}
+
+.food .no-webp #group3 .parallax__layer--back {
+  background-image: url(../assets/fallback/letter.png);
 }
 
 .food #group5 {

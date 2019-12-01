@@ -1,0 +1,31 @@
+.imprint #header {
+  z-index: 5;
+  /* slide over group 2 */
+}
+
+.imprint #header .parallax__layer--base {
+  background-image: url(../assets/tent_rules.webp);
+  box-shadow: 0 0 8px 8px #dcd5cc inset;
+}
+
+.imprint .no-webp #header .parallax__layer--base {
+  background-image: url(../assets/fallback/tent_rules.png);
+}
+
+.imprint #group2 {
+  z-index: 4;
+  /* slide under groups 1 and 3 */
+}
+
+.imprint #group3 {
+  z-index: 3;
+  /* slide over group 2 and 4 */
+}
+
+.imprint #group5 {
+  z-index: 2;
+}
+
+.imprint #group6 {
+  z-index: 3;
+}

@@ -9,10 +9,10 @@ const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 const text = {};
 text["AnnaRoutine1"] = 'Fast alle Dinge im Zeltlager werden demokratisch diskutiert und beschlossen. Nur einige wenige Dinge können die Kinder und Jugendlichen nicht beeinflussen, denn...'
 text["AnnaRoutine2"] = 'Als das Zeltlager wieder aufgebaut ist, geht alles wieder seinen geregelten Gang. Dazu gehört auch, dass die Kinder sich für Küchen- und Wachdienste melden müssen. Jedes Mädchen und jeder Junge hat einen Beitrag zu leisten, damit das Zeltlager gut funktioniert.'
-text["AnnaRoutine3"] = 'Anna hat sich dafür ein Spiel ausgedacht, um Neuankömmlingen diese Regeln leichter erklären zu können. Sie spielt es mit Karl, um auszuprobieren, ob es verständlich ist.'
+text["AnnaRoutine3"] = 'Anna hat sich dafür ein Spiel ausgedacht, um jüngeren Kindern diese Regeln leichter erklären zu können. Sie spielt es mit Karl, um auszuprobieren, ob es verständlich ist.'
 text["KarlRoutine1"] = 'Fast alle Dinge im Zeltlager werden demokratisch diskutiert und beschlossen. Nur einige wenige Dinge können die Kinder und Jugendlichen nicht beeinflussen, denn...'
 text["KarlRoutine2"] = 'Als das Zeltlager wieder aufgebaut ist, geht alles wieder seinen geregelten Gang. Dazu gehört auch, dass die Kinder sich für Küchen- und Wachdienste melden müssen. Jedes Mädchen und jeder Junge hat einen Beitrag zu leisten, damit das Zeltlager gut funktioniert.'
-text["KarlRoutine3"] = 'Anna hat sich dafür ein Spiel ausgedacht, um Neuankömmlingen diese Regeln leichter erklären zu können. Karl probiert es mit ihr aus, um zu sehen, ob es verständlich ist.'
+text["KarlRoutine3"] = 'Anna hat sich dafür ein Spiel ausgedacht, um jüngeren Kindern diese Regeln leichter erklären zu können. Karl probiert es mit ihr aus, um zu sehen, ob es verständlich ist.'
 
 class Routine extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class Routine extends Component {
         </div>
         <>
           <TicTacToe />
-          <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Es gibt noch mehr zu entdecken!</button>
+          <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Dein Magen knurrt und du hast jetzt keine Lust mehr, etwas zu spielen. Gehe direkt zum Essen.</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/food", state: { ...this.state } }} />}
         </>
       </Chapter>

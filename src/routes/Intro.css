@@ -4,12 +4,12 @@
 }
 
 #header .parallax__layer--base {
-  background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(../assets/header.webp);
+  background-image: url(../assets/header.webp);
   box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
 .no-webp #header .parallax__layer--base {
-  background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(../assets/fallback/header.png);
+  background-image: url(../assets/fallback/header.png);
 }
 
 #group2 {

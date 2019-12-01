@@ -10,6 +10,7 @@ const Republic = lazy(() => import("./routes/Republic"));
 const Children = lazy(() => import("./routes/Children"));
 const Routine = lazy(() => import("./routes/Routine"));
 const Food = lazy(() => import("./routes/Food"));
+const Imprint = lazy(() => import("./routes/Imprint"));
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/children' component={Children} />
             <Route path='/routine' component={Routine} />
             <Route path='/food' component={Food} />
+            <Route path='/imprint' component={Imprint} />
           </Switch>
         </Suspense>
       </div>

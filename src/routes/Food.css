@@ -1,0 +1,62 @@
+.food #header {
+  z-index: 5;
+  /* slide over group 2 */
+}
+
+.food #header .parallax__layer--base {
+  background-image: url(../assets/food.webp);
+  box-shadow: 0 0 8px 8px #dcd5cc inset;
+}
+
+.food .no-webp #header .parallax__layer--base {
+  background-image: url(../assets/fallback/food.png);
+}
+
+.food #group2 {
+  z-index: 4;
+  /* slide under groups 1 and 3 */
+}
+
+.food #group3 {
+  z-index: 3;
+  /* slide over group 2 and 4 */
+}
+
+.food #group3 .parallax__layer--back {
+  background-image: none;
+  box-shadow: none;
+}
+
+.food #group5 {
+  z-index: 2;
+}
+
+.food #group6 {
+  z-index: 3;
+}
+
+.food #group6 .parallax__layer--base {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/ship.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.food .no-webp #group6 .parallax__layer--base {
+  background-image: url(../assets/fallback/ship.png);
+}
+/*
+.food #group6 .parallax__layer--back {
+  background-image: url(../assets/tent_rules.webp);
+}
+
+.food .no-webp #group6 .parallax__layer--back {
+  background-image: url(../assets/fallback/tent_rules.png);
+}
+*/
+
+.food .image p {
+  margin: 1vw;
+}
+
+.food .image img {
+  width: 100vw;
+}

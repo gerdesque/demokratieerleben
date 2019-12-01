@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
-  const items = ["/", "/family", "/localgroup", "/way", "/republic"];
+  const items = ["/", "/family", "/localgroup", "/way", "/republic", "/children", "/routine", "/food"];
 
   return (
     <nav>

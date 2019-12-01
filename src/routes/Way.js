@@ -1,6 +1,6 @@
 import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./ChapterThree.css";
+import "./Way.css";
 import FadingImage from "../helper/FadingImage";
 import Chapter from "../helper/Chapter";
 const TicTacToe = lazy(() => import("../games/TicTacToe"));
@@ -18,7 +18,7 @@ text["KarlWeg4"] = 'Nach einem halben Tag kommen die Kinder und Jugendlichen ers
 text["KarlWeg5"] = 'Am Sonntagmorgen versammeln sich alle angereisten Kinder in der Kieler Nordostseehalle, es gibt Ansprachen und Musik. Am Ende singt der Chorverein „Brüder, zur Sonne, zur Freiheit“. Nun geht es endlich los zur Kinderrepublik nach Seekamp. Den letzten Weg legen alle mit dem Dampfer zurück, während die Zelte bereits mit Autos nach Seekamp gebracht wurden.'
 
 
-class ChapterThree extends Component {
+class Way extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,14 +33,14 @@ class ChapterThree extends Component {
 
   render() {
     return (
-      <Chapter class="three">
+      <Chapter class="way">
         <h1 className='title'>Der Weg zur Kinderrepublik</h1>
         <>
           <div className='box column'>
             <p>{text[this.state.avatar + "Weg1"]}</p>
           </div>
         </>
-        <div className='box column margin'>
+        <div className='box column image'>
           <p>{text[this.state.avatar + "Weg2"]}</p>
           <FadingImage direction='adults' source='adults' />
         </div>
@@ -54,11 +54,11 @@ class ChapterThree extends Component {
         <div className='box'>
           <p>{text[this.state.avatar + "Weg5"]}</p>
           <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Auf zur Kinderrepublik!</button>
-          {this.state.redirect && <Redirect exact to={{ pathname: "/chapterthree", state: { ...this.state } }} />}
+          {this.state.redirect && <Redirect exact to={{ pathname: "/republic", state: { ...this.state } }} />}
         </div>
       </Chapter>
     );
   }
 }
 
-export default ChapterThree;
+export default Way;

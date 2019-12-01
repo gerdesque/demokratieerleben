@@ -1,48 +1,48 @@
-#header {
+.family #header {
   z-index: 5;
   /* slide over group 2 */
 }
 
-#header .parallax__layer--base {
+.family #header .parallax__layer--base {
   background-image: url(../assets/family.webp);
   box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
-.no-webp #header .parallax__layer--base {
+.family .no-webp #header .parallax__layer--base {
   background-image: url(../assets/fallback/family.png);
 }
 
-#group2 {
+.family #group2 {
   z-index: 3;
   /* slide under groups 1 and 3 */
 }
 
-#group2 .parallax__layer--deep {
+.family #group2 .parallax__layer--deep {
   background-image: none;
   box-shadow: none;
 }
 
-#group3 {
+.family #group3 {
   z-index: 2;
   /* slide under group 3 and 5 */
 }
 
-#group3 .parallax__layer--back {
+.family #group3 .parallax__layer--back {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/way.webp);
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
-.no-webp #group2 .parallax__layer--deep {
+.family .no-webp #group2 .parallax__layer--deep {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/way.png);
 }
 
-#group4 {
+.family #group4 {
   z-index: 5;
   /* slide under group 3 and 5 */
 }
 
 @media (min-width: 600px) {
-  .box {
+  .family .box {
     top: 100%;
   }
 }

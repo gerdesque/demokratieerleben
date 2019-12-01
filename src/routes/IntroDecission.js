@@ -73,7 +73,7 @@ class IntroDecission extends Component {
     )
 
     const redirect = this.state.hasVideoStopped && (
-      <Redirect exact to={{ pathname: "/chapterone", state: { avatar: this.state.avatar, family: this.state.family } }} />
+      <Redirect exact to={{ pathname: "/localgroup", state: { avatar: this.state.avatar, family: this.state.family } }} />
     )
 
     return (

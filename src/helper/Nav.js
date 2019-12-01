@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
-  const items = ["/", "/chapterone", "/chaptertwo"];
+  const items = ["/", "/family", "/localgroup", "/way", "/republic"];
 
   return (
     <nav>

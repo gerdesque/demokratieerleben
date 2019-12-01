@@ -3,9 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./helper/Nav";
 import Intro from "./routes/Intro";
-const ChapterOne = lazy(() => import("./routes/ChapterOne"));
-const ChapterTwo = lazy(() => import("./routes/ChapterTwo"));
-const ChapterThree = lazy(() => import("./routes/ChapterThree"));
+const Family = lazy(() => import("./routes/Family"));
+const LocalGroup = lazy(() => import("./routes/LocalGroup"));
+const Way = lazy(() => import("./routes/Way"));
+const Republic = lazy(() => import("./routes/Republic"));
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path='/' component={Intro} />
-            <Route path='/chapterone' component={ChapterOne} />
-            <Route path='/chaptertwo' component={ChapterTwo} />
-            <Route path='/chapterthree' component={ChapterThree} />
+            <Route path='/family' component={Family} />
+            <Route path='/localgroup' component={LocalGroup} />
+            <Route path='/way' component={Way} />
+            <Route path='/republic' component={Republic} />
           </Switch>
         </Suspense>
       </div>

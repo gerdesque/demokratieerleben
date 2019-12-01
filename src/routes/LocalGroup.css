@@ -1,53 +1,44 @@
-#header {
+.local-group #header {
   z-index: 5;
   /* slide over group 2 */
 }
 
-#header .parallax__layer--base {
+.local-group #header .parallax__layer--base {
   background-image: url(../assets/group.webp);
 }
 
-.no-webp #header .parallax__layer--base {
+.local-group .no-webp #header .parallax__layer--base {
   background-image: url(../assets/fallback/group.png);
 }
 
-#group2 {
+.local-group #group2 {
   z-index: 3;
   /* slide under groups 1 and 3 */
 }
 
-#group3 {
+.local-group #group3 {
   z-index: 4;
   /* slide over group 2 and 4 */
 }
 
-#group3 .parallax__layer--back {
+.local-group #group3 .parallax__layer--back {
   background-image: none;
   box-shadow: none;
 }
 
-#group5 .parallax__layer--base {
+.local-group #group5 .parallax__layer--base {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/participants.webp);
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
-.no-webp #group5 .parallax__layer--base {
+.local-group .no-webp #group5 .parallax__layer--base {
   background-image: url(../assets/fallback/participants.png);
 }
 
-#group5 {
+.local-group #group5 {
   z-index: 3;
 }
 
-#group6 {
+.local-group #group6 {
   z-index: 2;
 }
-/*
-#group6 .parallax__layer--back {
-  background-image: url(../assets/tent_rules.webp);
-}
-
-.no-webp #group6 .parallax__layer--back {
-  background-image: url(../assets/fallback/tent_rules.png);
-}
-*/

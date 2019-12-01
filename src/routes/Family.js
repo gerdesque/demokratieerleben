@@ -1,6 +1,6 @@
 import React, { Component, lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./ChapterOne.css";
+import "./Family.css";
 import Chapter from "../helper/Chapter";
 const Puzzle = lazy(() => import("../games/Puzzle"));
 
@@ -18,7 +18,7 @@ text["KarlMutter"] =
 text["KarlGroßvater"] =
   "Karl wurde traurig bei dem Gedanken an seinen verstorbenen Großvater, den er sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte er sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der er einen Aushang in der Schule gesehen hatte.";
 
-class ChapterOne extends Component {
+class Family extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ class ChapterOne extends Component {
 
   render() {
     return (
-      <Chapter>
+      <Chapter class="family">
         <h1 className='title__white'>Bei {this.state.avatar}</h1>
         <div className='box'>
           <p>{text[this.state.avatar + this.state.family]}</p>
@@ -55,4 +55,4 @@ class ChapterOne extends Component {
   }
 }
 
-export default ChapterOne;
+export default Family;

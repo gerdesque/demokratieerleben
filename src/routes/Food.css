@@ -17,18 +17,17 @@
   /* slide under groups 1 and 3 */
 }
 
+.food #group2 .parallax__layer--deep {
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/map.webp);
+}
+
+.food .no-webp #group2 .parallax__layer--deep {
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/fallback/map.png);
+}
+
 .food #group3 {
   z-index: 3;
   /* slide over group 2 and 4 */
-}
-
-.food #group3 .parallax__layer--back {
-  background-image: linear-gradient(to top,rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../assets/letter.webp);
-  box-shadow: 0 0 8px 8px #dcd5cc inset;
-}
-
-.food .no-webp #group3 .parallax__layer--back {
-  background-image: url(../assets/fallback/letter.png);
 }
 
 .food #group4 {
@@ -37,6 +36,15 @@
 
 .food #group5 {
   z-index: 2;
+}
+
+.food #group5 .parallax__layer--base {
+  background-image: linear-gradient(to top,rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../assets/letter.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.food .no-webp #group5 .parallax__layer--base {
+  background-image: url(../assets/fallback/letter.png);
 }
 
 .food #group6 {

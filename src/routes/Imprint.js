@@ -19,7 +19,7 @@ class Imprint extends Component {
     return (
       <Chapter class="imprint">
         <>
-        <h1 className='title'>Hintergründe</h1>
+        <h1 className='title'>Hinter&shy;gründe</h1>
         </>
         <div className='box column'>
           <p>{text["Imprint1"]}</p>

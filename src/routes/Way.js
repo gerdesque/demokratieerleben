@@ -34,7 +34,7 @@ class Way extends Component {
   render() {
     return (
       <Chapter class="way">
-        <h1 className='title'>Der Weg zur Kinderrepublik</h1>
+        <h1 className='title'>Der Weg zur Kinder&shy;republik</h1>
         <>
           <div className='box column'>
             <p>{text[this.state.avatar + "Weg1"]}</p>

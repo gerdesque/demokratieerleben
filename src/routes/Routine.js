@@ -46,7 +46,7 @@ class Routine extends Component {
         </div>
         <>
           <TicTacToe />
-          <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Dein Magen knurrt und du hast jetzt keine Lust mehr, etwas zu spielen. Gehe direkt zum Essen.</button>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Dein Magen knurrt und du hast jetzt keine Lust mehr, etwas zu spielen. Gehe direkt zum Essen.</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/food", state: { ...this.state } }} />}
         </>
       </Chapter>

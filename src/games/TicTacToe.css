@@ -1,5 +1,7 @@
 .game-info {
-  margin-bottom: 20px;
+  display: flex;
+  max-width: 75vw;
+  margin: auto;
   text-align: center;
 }
 

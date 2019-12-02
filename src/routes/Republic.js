@@ -43,7 +43,7 @@ class Republic extends Component {
         </div>
         <>
           <TicTacToe />
-          <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern.</button>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern.</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/children", state: { ...this.state } }} />}
         </>
       </Chapter>

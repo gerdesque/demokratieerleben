@@ -17,7 +17,8 @@ class IntroDecission extends Component {
       family: "",
       videoSrc: require("../assets/movies/Anna_Vater.mp4"),
       hasVideoStarted: false,
-      hasVideoStopped: false
+      hasVideoStopped: false,
+      isHover: false
     };
   }
 
@@ -46,7 +47,7 @@ class IntroDecission extends Component {
       <FadeInSection direction='bottom'>
         <p>Wen möchtest du auf diesem Weg begleiten?</p>
         {avatars.map((avatar) =>
-          <button type='button' className='link-button' key={avatar} onClick={() => this.setState({ avatar: avatar })}>{avatar}</button>)}
+          <button type='button' className='link-button' key={avatar} onMouseOut={() => this.setState({ isHover: false })} onMouseOver={() => this.setState({ isHover: avatar })} onClick={() => this.setState({ avatar: avatar })}>{avatar}</button>)}
       </FadeInSection>
 
     const overlayText = 
@@ -87,10 +88,10 @@ class IntroDecission extends Component {
           {redirect}
         </div>
         <div className='aside aside-left'>
-          <FadingImage direction='left' source='karl' />
+          {this.state.isHover === "Karl" ? <FadingImage direction='left' source='karl_highlighted' /> : <FadingImage direction='left' source='karl' />}
         </div>
         <div className='aside aside-right'>
-          <FadingImage direction='right' source='anna_highlighted' />
+          {this.state.isHover === "Anna" ? <FadingImage direction='right' source='anna_highlighted' /> : <FadingImage direction='right' source='anna' />}
         </div>
       </div>
     );

@@ -90,3 +90,9 @@
     font-weight: bold;
     color: #E3000F;
   }
+
+  .link-button.redirect {
+    display: flex;
+    width: 75vw;
+    margin: auto;
+  }

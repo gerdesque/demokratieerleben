@@ -42,7 +42,7 @@ class Food extends Component {
           <p>{text[this.state.avatar + "Food3"]}</p>
         </div>
         <>
-          <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Wenn dich die Hintergründe zu der Geschichte von Anna und Karl interessieren, findest du hier weitere Informationen und Links. </button>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Wenn dich die Hintergründe zu der Geschichte von Anna und Karl interessieren, findest du hier weitere Informationen und Links. </button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/imprint"}} />}
         </>
       </Chapter>

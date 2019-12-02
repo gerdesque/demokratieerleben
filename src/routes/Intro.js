@@ -19,7 +19,7 @@ class Intro extends Component {
 
   render = () => {
     return (
-      <Chapter>
+      <Chapter class="intro">
         <FadeInSection direction='title' onOutOfView={value => this.stopAudio(value)}>
           <h1>
             Demokratie <i>er</i>leben

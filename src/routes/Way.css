@@ -27,6 +27,10 @@
   box-shadow: none;
 }
 
+.way #group4 {
+  z-index: 5;
+}
+
 .way #group5 {
   z-index: 3;
 }
@@ -36,22 +40,13 @@
 }
 
 .way #group6 .parallax__layer--base {
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/ship.webp);
+  background-image: linear-gradient(to top,rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../assets/ship.webp);
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
 .way .no-webp #group6 .parallax__layer--base {
   background-image: url(../assets/fallback/ship.png);
 }
-/*
-.way #group6 .parallax__layer--back {
-  background-image: url(../assets/tent_rules.webp);
-}
-
-.way .no-webp #group6 .parallax__layer--back {
-  background-image: url(../assets/fallback/tent_rules.png);
-}
-*/
 
 .way .image p {
   margin: 1vw;

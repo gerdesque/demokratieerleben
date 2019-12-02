@@ -35,10 +35,10 @@ class Children extends Component {
           <p>{text[this.state.avatar + "Children2"]}</p>
           <PlayableVideo source={`${this.state.avatar}_Arbeitsgruppe`} pauseVideo={() => this.pauseVideo('#group4')}/>
         </div>
-        <>
+        <div className='box column'>
           <button type='button' className='link-button' onClick={() => this.setState({redirect: true})}>Zum Alltag der Kinderrepublik gehören auch Überraschungen...</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/routine", state: { ...this.state } }} />}
-        </>
+          </div>
       </Chapter>
     );
   }

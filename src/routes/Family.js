@@ -14,7 +14,7 @@ text["AnnaGroßvater"] =
 text["KarlVater"] =
   "Karl gefiel diese Idee und so machte er sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
 text["KarlMutter"] =
-  "Karl behagte nicht, was seine Mutter erzählt hatte. Von einem Freund hatte er von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstalteten. Das wollte er sich mal ansehen!";
+  "Karl behagte nicht, was seine Mutter erzählt hatte. Von einem Freund hatte er von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das wollte er sich mal ansehen!";
 text["KarlGroßmutter"] =
   "Karl wurde traurig bei dem Gedanken an seinen verstorbenen Großvater, den er sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte er sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der er einen Aushang in der Schule gesehen hatte.";
 

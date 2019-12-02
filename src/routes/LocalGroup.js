@@ -4,6 +4,7 @@ import "./LocalGroup.css";
 import FadingImage from "../helper/FadingImage";
 import Chapter from "../helper/Chapter";
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
+const Suitcase = lazy(() => import("../games/Suitcase"));
 
 const text = {};
 text["AnnaOrtsgruppe"] = 'Anna betritt den großen Raum und wird direkt von einem Mädchen begrüßt, dass so alt ist wie sie: "Guten Tag, ich bin Gerda. Ich kümmere mich um die Neuen. Ich zeige dir, was wir hier machen. Wir bereiten gerade ein Zeltlager für das nächste Jahr vor."';
@@ -29,8 +30,8 @@ class LocalGroup extends Component {
     document.querySelector(value).scrollIntoView({ behavior: 'smooth' });
   };
 
-  checkGameState = solved => {
-    solved && setTimeout(() => this.setState({ hasGameSolved: true }), 2000);
+  handleCheckBag = () => {
+    setTimeout(() => this.setState({ hasGameSolved: true }), 1500);
   };
 
   render() {
@@ -53,10 +54,11 @@ class LocalGroup extends Component {
         <div className='box column'>
           <p>{text[this.state.avatar + "Ortsgruppe4"]}</p>
         </div>
-        <div className='box column'>
-          <button type='button' className='link-button' onClick={() => this.setState({hasGameSolved: true})}>Hier Spiel einfügen!</button>
+        <>
+          <Suitcase avatar={this.state.avatar} onCheckBag={this.handleCheckBag}/>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({hasGameSolved: true})}>Ohne Spiel weiter!</button>
           {this.state.hasGameSolved && <Redirect exact to={{ pathname: "/way", state: { ...this.state } }} />}
-        </div>
+        </>
       </Chapter>
     );
   }

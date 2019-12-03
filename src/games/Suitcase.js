@@ -60,8 +60,7 @@ class Items extends React.Component {
         render = {() => {
           return <FadingImage direction={this.props.image} source={this.props.image} />
         }}
-      />
-        
+      />    
     );
   }
 }

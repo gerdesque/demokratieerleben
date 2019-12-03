@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import originalImage from "../assets/puzzle.webp";
 import "./Puzzle.css";
+import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import FadingImage from "../helper/FadingImage";
 
 class Puzzle extends Component {
   state = {
@@ -34,25 +36,19 @@ class Puzzle extends Component {
 
   handleDrop(e, index, targetName) {
     let target = this.state[targetName];
-    if (target[index]) return;
+    const pieceOrder = e.dragData.piece.order;
+    if (target[pieceOrder]) return;
 
-    const pieceOrder = e.dataTransfer.getData("text");
     const pieceData = this.state.pieces.find(p => p.order === +pieceOrder);
     const origin = this.state[pieceData.board];
 
     if (targetName === pieceData.board) target = origin;
     origin[origin.indexOf(pieceData)] = undefined;
-    target[index] = pieceData;
+    target[pieceOrder] = pieceData;
     pieceData.board = targetName;
 
     this.setState({ [pieceData.board]: origin, [targetName]: target });
     this.checkBoard();
-  }
-
-  handleDragStart(e, order) {
-    const dt = e.dataTransfer;
-    dt.setData("text/plain", order);
-    dt.effectAllowed = "move";
   }
 
   render() {
@@ -70,22 +66,16 @@ class Puzzle extends Component {
   }
 
   renderPieceContainer(piece, index, boardName) {
-    return (
-      <li key={index} onDragOver={e => e.preventDefault()} onDrop={e => this.handleDrop(e, index, boardName)}>
-        {piece && (
-          <picture>
-            <source srcSet={require(`../assets/${piece.img}.webp`)} type='image/webp' />
-            <source srcSet={require(`../assets/fallback/${piece.img}.png`)} type='image/png' />
-            <img
-              draggable
-              onDragStart={e => this.handleDragStart(e, piece.order)}
-              src={require(`../assets/fallback/${piece.img}.png`)}
-              alt={"Puzzle" + index}
-            />
-          </picture>
-        )}
-      </li>
-    );
+    const boardContent = (boardName === "shuffled") ? 
+    <DragDropContainer targetKey="puzzle" dragData={{piece: piece}} onDrop={e => this.handleDrop(e, index, "solved")}>
+      <DropTarget targetKey="puzzle">
+        <li key={index}>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+      </DropTarget>
+    </DragDropContainer> :
+    <DropTarget targetKey="puzzle">
+      <li key={index}>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+    </DropTarget>
+    return boardContent;
   }
 
   shufflePieces(pieces) {

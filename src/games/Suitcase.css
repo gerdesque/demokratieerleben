@@ -38,7 +38,7 @@
 }
 
 .suitcase .items > * {
-  width: 17%;
+  width: 25%;
   margin: auto;
 }
 
@@ -49,4 +49,10 @@
 
 .suitcase .dragText {
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .suitcase .items > * {
+    width: 10%;
+  }
 }

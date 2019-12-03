@@ -8,7 +8,8 @@ class Suitcase extends Component {
     super(props);
     this.state = {
       drag: '',
-      bagCount: 0
+      bagCount: 0,
+      showResult: false
     };
   }
 

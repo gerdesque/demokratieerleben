@@ -1,0 +1,107 @@
+/* .memory .items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.memory .bag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memory .items > * {
+  width: 25%;
+  margin: auto;
+}
+
+.memory .items img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.memory .dragText {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .memory .items > * {
+    width: 10%;
+  }
+} */
+
+.memory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  perspective: 1000px;
+  width: 75%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.memory .description {
+  width: 75vw;
+  margin: 0 auto 1em;
+  text-align: center;
+}
+
+.memory .card {
+  width: 23%;
+  height: 197px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 1%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.memory .card div {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.6s;
+  background: #f4f5f7;
+}
+.memory .card .front {
+  cursor: pointer;
+}
+.memory .card .back {
+  transform: rotateY(180deg);
+}
+.memory .card img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+.memory .card.opened , .memory .card.matched {
+  transform: rotateY(180deg);
+}
+
+.memory .card.matched .back {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05) inset;
+  animation: selected 0.8s 0s ease 1;
+  animation-fill-mode: both;
+  opacity: 0.2;
+}
+@keyframes selected {
+  0% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

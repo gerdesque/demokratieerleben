@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Daily.css";
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import FadingImage from "../helper/FadingImage";
+
 var shortid = require('shortid');
 const dailyPlanItems = ["Waschen und Baden", "Frühstück", "Wanderungen machen", "Sprechstunde des Lagerarztes", 
 "Lagerruhe - Post- und Zeitungsausgabe", "Tagung des Lagerparlaments", "Gemeinsame Veranstaltungen", "Zeltruhe"];
@@ -12,19 +14,23 @@ class Daily extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      boxCount: 0
+      boxCount: 0,
+      showResult: false
     };
   }
 
-  dropped = (e) => {
-    e.containerElem.style.visibility="hidden";
-    this.setState({boxCount: this.state.bagCount+1})
-    if (this.state.boxCount === dailyPlanItems.length) {
-      this.props.onCheckBox();
-    }
+  handleClick = () => {
+    this.setState({showResult: true})
+    this.props.onCheckDaily();
 };
 
   render() {
+    const daily = this.state.showResult ? 
+      <FadingImage direction='daily_result' source='daily_result' /> : 
+      <>
+      <Box targetKey="box"/>
+      <button type='button' className='link-button' onClick={this.handleClick}>Tagesplan prüfen!</button>
+      </>
     return (
       <div className="daily">
         <p className="description">Spielbeschreibung einfügen!</p>
@@ -33,7 +39,7 @@ class Daily extends Component {
           <Items key={index} targetKey="box" label={item} id={index} />
         )}
         </div>
-        <Box targetKey="box"/>
+        {daily}
       </div>
     )
   }

@@ -17,7 +17,8 @@ class Republic extends Component {
     super(props);
     this.state = {
       avatar: this.props.location.state ? this.props.location.state.avatar : "Anna",
-      redirect: false
+      redirect: false,
+      hasGameSolved: false
     };
   }
 
@@ -25,8 +26,13 @@ class Republic extends Component {
     document.querySelector(value).scrollIntoView({ behavior: 'smooth' });
   };
 
+  handleCheckDaily = () => {
+    this.setState({ hasGameSolved: true });
+  };
+
   render() {
     const isAnna = this.state.avatar === "Anna";
+    const redirectText = this.state.hasGameSolved ? "Weiter zu den Kindern" : "Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern."
     return (
       <Chapter class="republic">
         <div className='title'><h1 className='title'>Die Kinder&shy;republik</h1></div>
@@ -42,8 +48,8 @@ class Republic extends Component {
           <p>{text[this.state.avatar + "Republik3"]}</p>
         </div>
         <>
-          <Daily />
-          <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern.</button>
+          <Daily onCheckDaily={this.handleCheckDaily}/>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>{redirectText}</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/children", state: { ...this.state } }} />}
         </>
       </Chapter>

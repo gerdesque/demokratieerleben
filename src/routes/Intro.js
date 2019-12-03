@@ -14,6 +14,7 @@ class Intro extends Component {
   };
 
   stopAudio = value => {
+    if (!this.birds) return;
     value ? this.birds.pause() : this.birds.play();
   };
 

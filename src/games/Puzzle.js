@@ -34,7 +34,7 @@ class Puzzle extends Component {
     this.props.onCheckBoard(true);
   }
 
-  handleDrop(e, index, targetName) {
+  handleDrop(e, targetName) {
     let target = this.state[targetName];
     const pieceOrder = e.dragData.piece.order;
     if (target[pieceOrder]) return;
@@ -67,13 +67,13 @@ class Puzzle extends Component {
 
   renderPieceContainer(piece, index, boardName) {
     const boardContent = (boardName === "shuffled") ? 
-    <DragDropContainer targetKey="puzzle" dragData={{piece: piece}} onDrop={e => this.handleDrop(e, index, "solved")}>
+    <DragDropContainer key={index} targetKey="puzzle" dragData={{piece: piece}} onDrop={e => this.handleDrop(e, "solved")}>
       <DropTarget targetKey="puzzle">
-        <li key={index}>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+        <li>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
       </DropTarget>
     </DragDropContainer> :
-    <DropTarget targetKey="puzzle">
-      <li key={index}>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+    <DropTarget key={index} targetKey="puzzle">
+      <li >{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
     </DropTarget>
     return boardContent;
   }

@@ -2,7 +2,7 @@ import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./Republic.css";
 import Chapter from "../helper/Chapter";
-const TicTacToe = lazy(() => import("../games/TicTacToe"));
+const Daily = lazy(() => import("../games/Daily"));
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 
 const text = {};
@@ -42,7 +42,7 @@ class Republic extends Component {
           <p>{text[this.state.avatar + "Republik3"]}</p>
         </div>
         <>
-          <TicTacToe />
+          <Daily />
           <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern.</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/children", state: { ...this.state } }} />}
         </>

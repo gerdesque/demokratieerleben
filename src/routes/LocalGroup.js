@@ -37,7 +37,7 @@ class LocalGroup extends Component {
   render() {
     return (
       <Chapter class="local-group">
-        <h1 className='title'>Die Ortsgruppe</h1>
+        <div className='title'><h1 className='title'>Die Ortsgruppe</h1></div>
         <>
           <div className='box'>
             <p>{text[this.state.avatar + "Ortsgruppe"]}</p>

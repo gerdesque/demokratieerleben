@@ -86,7 +86,7 @@ class Box extends React.Component {
 
   render() {
     return (
-      <div className="component_box">
+      <div>
           <DropTarget
             onHit={this.handleDrop}
             targetKey={this.props.targetKey}
@@ -95,7 +95,7 @@ class Box extends React.Component {
               onHit={this.handleDrop}
               targetKey="boxItem"
               dropData={{name: this.props.name}}>
-              <div className="box">
+              <div className="component_box">
                 {this.state.items.map((item, index) => {
                   return (
                     <BoxItem key={item.uid} uid={item.uid} kill={this.kill} index={index} swap={this.swap}>

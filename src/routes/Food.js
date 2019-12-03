@@ -28,9 +28,7 @@ class Food extends Component {
   render() {
     return (
       <Chapter class="food">
-        <>
-        <h1 className='title'>Essen in der Republik</h1>
-        </>
+        <div className='title'><h1 className='title'>Essen in der Republik</h1></div>
         <div className='box column'>
           <p>{text[this.state.avatar + "Food1"]}</p>
           <PlayableVideo source={`${this.state.avatar}_Essen`} pauseVideo={() => this.pauseVideo('#group3')}/>

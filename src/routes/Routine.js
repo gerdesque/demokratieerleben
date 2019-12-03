@@ -31,8 +31,8 @@ class Routine extends Component {
     return (
       <Chapter class="routine">
         <>
-        <Rain />
-        <h1 className='title'>Alltag in der Republik</h1>
+          <Rain />
+          <div className='title'><h1 className='title'>Alltag in der Republik</h1></div>
         </>
         <div className='box column'>
           <p>{text[this.state.avatar + "Routine1"]}</p>

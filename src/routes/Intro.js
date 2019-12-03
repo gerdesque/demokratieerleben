@@ -22,9 +22,7 @@ class Intro extends Component {
     return (
       <Chapter class="intro">
         <FadeInSection direction='title' onOutOfView={value => this.stopAudio(value)}>
-          <h1>
-            Demokratie <i>er</i>leben
-          </h1>
+          <div className='title'><h1>Demokratie <i>er</i>leben</h1></div>
           <Birds />
           <audio ref={this.setBirdsRef} hidden loop>
             <source src={require("../assets/sounds/birds.mp3")} type='audio/mpeg' />

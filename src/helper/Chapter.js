@@ -7,9 +7,7 @@ class Chapter extends Component {
       <div className={`parallax ${this.props.class}`}>
         {this.props.children[0] && (
           <div id='header' className='parallax__group'>
-            <div className='parallax__layer parallax__layer--base'>
-              <div className='title'>{this.props.children[0]}</div>
-            </div>
+            <div className='parallax__layer parallax__layer--base'>{this.props.children[0]}</div>
           </div>
         )}
         {this.props.children[1] && (

@@ -35,7 +35,7 @@ class Family extends Component {
   render() {
     return (
       <Chapter class="family">
-        <h1 className='title'>Bei {this.state.avatar}</h1>
+        <div className='title'><h1 className='title'>Bei {this.state.avatar}</h1></div>
         <div className='box'>
           <p>{text[this.state.avatar + this.state.family]}</p>
         </div>

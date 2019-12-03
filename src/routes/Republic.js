@@ -29,7 +29,7 @@ class Republic extends Component {
     const isAnna = this.state.avatar === "Anna";
     return (
       <Chapter class="republic">
-        <h1 className='title'>Die Kinder&shy;republik</h1>
+        <div className='title'><h1 className='title'>Die Kinder&shy;republik</h1></div>
         <div className='box column'>
           <p>{text[this.state.avatar + "Republik1"]}</p>
           {isAnna && <PlayableVideo source={`${this.state.avatar}_Zeltobmann`} pauseVideo={() => this.pauseVideo('#group3')}/>}

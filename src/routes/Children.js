@@ -26,7 +26,7 @@ class Children extends Component {
   render() {
     return (
       <Chapter class="children">
-        <h1 className='title'>Die Kinder der Republik</h1>
+        <div className='title'><h1 className='title'>Die Kinder der Republik</h1></div>
         <div className='box column'>
           <p>{text[this.state.avatar + "Children1"]}</p>
           <PlayableVideo source={`${this.state.avatar}_Dialekte`} pauseVideo={() => this.pauseVideo('#group3')}/>

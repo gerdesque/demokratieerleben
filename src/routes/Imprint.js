@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./Imprint.css";
 import FadingImage from "../helper/FadingImage";
+import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";
 
 const text = {};
@@ -16,10 +17,34 @@ class Imprint extends Component {
     };
   }
 
+  setAudioRef = element => {
+    this.audio = element;
+  };
+
+  stopAudio = value => {
+    if (!this.audio) return;
+
+    var promise = value ? this.audio.pause() : this.audio.play();
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        // Autoplay started!
+      }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+      });
+    }
+  };
+
   render() {
     return (
       <Chapter class="imprint">
-        <div className='title'><h1 className='title'>Hinter&shy;gründe</h1></div>
+        <FadeInSection onOutOfView={value => this.stopAudio(value)}>
+          <div className='title'><h1 className='title'>Hinter&shy;gründe</h1></div>
+          <audio ref={this.setAudioRef} hidden loop>
+            <source src={require(`../assets/sounds/imprint.mp3`)} type='audio/mpeg' />
+          </audio>
+        </FadeInSection>
         <div className='box column'>
           <p>{text["Imprint1"]}</p>
         </div>

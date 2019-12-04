@@ -2,6 +2,7 @@ import React, { Component, lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./LocalGroup.css";
 import FadingImage from "../helper/FadingImage";
+import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 const Suitcase = lazy(() => import("../games/Suitcase"));
@@ -26,6 +27,25 @@ class LocalGroup extends Component {
     };
   }
 
+  setAudioRef = element => {
+    this.audio = element;
+  };
+
+  stopAudio = value => {
+    if (!this.audio) return;
+
+    var promise = value ? this.audio.pause() : this.audio.play();
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        // Autoplay started!
+      }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+      });
+    }
+  };
+
   pauseVideo = value => {
     document.querySelector(value).scrollIntoView({ behavior: 'smooth' });
   };
@@ -37,7 +57,12 @@ class LocalGroup extends Component {
   render() {
     return (
       <Chapter class="local-group">
-        <div className='title'><h1 className='title'>Die Ortsgruppe</h1></div>
+        <FadeInSection onOutOfView={value => this.stopAudio(value)}>
+          <div className='title'><h1 className='title'>Die Ortsgruppe</h1></div>
+          <audio ref={this.setAudioRef} hidden loop>
+            <source src={require(`../assets/sounds/localgroup.mp3`)} type='audio/mpeg' />
+          </audio>
+        </FadeInSection>
         <>
           <div className='box'>
             <p>{text[this.state.avatar + "Ortsgruppe"]}</p>

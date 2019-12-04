@@ -1,6 +1,7 @@
 import React, { Component, lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./Family.css";
+import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";
 const Puzzle = lazy(() => import("../games/Puzzle"));
 
@@ -28,6 +29,25 @@ class Family extends Component {
     };
   }
 
+  setAudioRef = element => {
+    this.audio = element;
+  };
+
+  stopAudio = value => {
+    if (!this.audio) return;
+
+    var promise = value ? this.audio.pause() : this.audio.play();
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        // Autoplay started!
+      }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+      });
+    }
+  };
+
   handleCheckBoard = solved => {
     solved && setTimeout(() => this.setState({ hasPuzzleSolved: true }), 1500);
   };
@@ -35,7 +55,12 @@ class Family extends Component {
   render() {
     return (
       <Chapter class="family">
-        <div className='title'><h1 className='title'>Bei {this.state.avatar}</h1></div>
+        <FadeInSection onOutOfView={value => this.stopAudio(value)}>
+          <div className='title'><h1 className='title'>Bei {this.state.avatar}</h1></div>
+          <audio ref={this.setAudioRef} hidden loop>
+            <source src={require(`../assets/sounds/family.mp3`)} type='audio/mpeg' />
+          </audio>
+        </FadeInSection>
         <div className='box'>
           <p>{text[this.state.avatar + this.state.family]}</p>
         </div>

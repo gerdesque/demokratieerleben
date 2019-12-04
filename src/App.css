@@ -100,4 +100,5 @@
     display: flex;
     width: 75vw;
     margin: auto;
+    justify-content: center;
   }

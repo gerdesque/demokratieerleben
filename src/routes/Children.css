@@ -32,6 +32,9 @@
   /* slide over group 2 and 4 */
 }
 
+.children #group4 .box {
+  margin-top: 50%;
+}
 
 .children .image p {
   margin: 1vw;

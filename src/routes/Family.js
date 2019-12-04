@@ -6,17 +6,17 @@ const Puzzle = lazy(() => import("../games/Puzzle"));
 
 const text = {};
 text["AnnaVater"] =
-  "Anna gefiel diese Idee und so machte sie sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
+  "Anna gefällt diese Idee und so macht sie sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
 text["AnnaMutter"] =
-  "Anna behagte nicht, was ihre Mutter erzählt hatte. Von einer Freundin hatte sie von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das wollte sie sich mal ansehen!";
+  "Anna behagt nicht, was ihre Mutter erzählt hatte. Von einer Freundin hatte sie von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das will sie sich mal ansehen!";
 text["AnnaGroßvater"] =
-  "Anna wurde traurig bei dem Gedanken an ihrer verstorbene Großmutter, die sie sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte sie sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der sie einen Aushang in der Schule gesehen hatte.";
+  "Anna wird traurig bei dem Gedanken an ihrer verstorbene Großmutter, die sie sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhofft sie sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der sie einen Aushang in der Schule gesehen hatte.";
 text["KarlVater"] =
-  "Karl gefiel diese Idee und so machte er sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
+  "Karl gefällt diese Idee und so macht er sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
 text["KarlMutter"] =
-  "Karl behagte nicht, was seine Mutter erzählt hatte. Von einem Freund hatte er von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das wollte er sich mal ansehen!";
+  "Karl behagt nicht, was seine Mutter erzählt hatte. Von einem Freund hatte er von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das will er sich mal ansehen!";
 text["KarlGroßmutter"] =
-  "Karl wurde traurig bei dem Gedanken an seinen verstorbenen Großvater, den er sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte er sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der er einen Aushang in der Schule gesehen hatte.";
+  "Karl wird traurig bei dem Gedanken an seinen verstorbenen Großvater, den er sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhofft er sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der er einen Aushang in der Schule gesehen hatte.";
 
 class Family extends Component {
   constructor(props) {

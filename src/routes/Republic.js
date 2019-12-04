@@ -32,7 +32,7 @@ class Republic extends Component {
 
   render() {
     const isAnna = this.state.avatar === "Anna";
-    const redirectText = this.state.hasGameSolved ? "Weiter zu den Kindern" : "Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern."
+    const redirectText = this.state.hasGameSolved ? "Der Tagesplan steht. Nun kannst du schauen, was die anderen Kinder machen." : "Du weißt das schon alles, deswegen beschäftigst du dich lieber direkt mit den anderen Kindern."
     return (
       <Chapter class="republic">
         <div className='title'><h1 className='title'>Die Kinder&shy;republik</h1></div>

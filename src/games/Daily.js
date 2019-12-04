@@ -29,11 +29,11 @@ class Daily extends Component {
       <FadingImage source='daily_result' /> : 
       <>
       <Box targetKey="box"/>
-      <button type='button' className='link-button' onClick={this.handleClick}>Tagesplan prüfen!</button>
+      <button type='button' className='link-button show' onClick={this.handleClick}>Tagesplan anzeigen!</button>
       </>
     return (
       <div className="daily">
-        <p className="description">Spielbeschreibung einfügen!</p>
+        <p className="description">Um die einzelnen Tagespunkte in die richtige Reihenfolge zu bringen, ziehe sie einfach auf das Plakat. Klicke auf "Tagesplan anzeigen!", um dir den originalen Tagesablauf anzusehen.</p>
         <div className="items">
         {dailyPlanItems.map((item, index) =>
           <Items key={index} targetKey="box" label={item} id={index} />

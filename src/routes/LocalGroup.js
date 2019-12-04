@@ -56,7 +56,7 @@ class LocalGroup extends Component {
         </div>
         <>
           <Suitcase avatar={this.state.avatar} onCheckBag={this.handleCheckBag}/>
-          <button type='button' className='link-button redirect' onClick={() => this.setState({hasGameSolved: true})}>Ohne Spiel weiter!</button>
+          <button type='button' className='link-button redirect' onClick={() => this.setState({hasGameSolved: true})}>Du sitzt schon längst auf gepackten Koffern und gehst direkt zum Treffpunkt.</button>
           {this.state.hasGameSolved && <Redirect exact to={{ pathname: "/way", state: { ...this.state } }} />}
         </>
       </Chapter>

@@ -24,7 +24,7 @@ class Suitcase extends Component {
   render() {
     return (
       <div className="suitcase">
-        <p className="description">Spielbeschreibung einfügen!</p>
+        <p className="description">Um einen Gegenstand einzupacken, ziehe ihn direkt auf den Rucksack. <br/> Tipp: Manche Dinge werden in der Kinderrepublik dringend benötigt, andere gab es 1928 noch gar nicht.</p>
         <div className="items">
           <Items targetKey="bag" label="eine Feldflasche" image="Feldflasche"/>
           <Items targetKey="negativ" label="einen Hammer" image="Hammer"/>

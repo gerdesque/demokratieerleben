@@ -51,6 +51,13 @@ class Puzzle extends Component {
     this.checkBoard();
   }
 
+  onDrag(dragData, currentTarget, x, y) {
+    console.log(dragData, currentTarget, x, y)
+    var rect = currentTarget.getBoundingClientRect();
+    //currentTarget.style.left = rect.x - 500 + 'px';
+    //currentTarget.style.top  = rect.y - 500 + 'px';
+  }
+
   render() {
     return (
       <div className='puzzle'>
@@ -67,7 +74,7 @@ class Puzzle extends Component {
 
   renderPieceContainer(piece, index, boardName) {
     const boardContent = (boardName === "shuffled") ? 
-    <DragDropContainer key={index} targetKey="puzzle" dragData={{piece: piece}} onDrop={e => this.handleDrop(e, "solved")}>
+    <DragDropContainer key={index} targetKey="puzzle" dragData={{piece: piece}} onDrag={this.onDrag} onDrop={e => this.handleDrop(e, "solved")}>
       <DropTarget targetKey="puzzle">
         <li>{piece && (<FadingImage source={piece.img} />)}</li>
       </DropTarget>

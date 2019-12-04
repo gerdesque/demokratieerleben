@@ -81,10 +81,12 @@ class Memory extends Component {
   render(){
     return (
       <div className="memory">
-        <p className="description">Spielbeschreibung einfügen!</p>
-        {this.state.finalizedItems.map((item, index) => {
-            return <Card key={index} item={item.name} click={() => {this.handleClick(item.name,index)}} close={item.close} complete={item.complete}/>
+        <p className="description">In diesem Aufdeck-Spiel geht es darum, gleiche Paare zu finden. Diese bestehen aus einer Zeichnung und dem dazu passenden Foto. Klicke einfach auf die Kärtchen, um zu sehen, was sich auf der Rückseite befindet. Zusammenpassende Paare bleiben aufgedeckt liegen.</p>
+        <div className="cards">
+          {this.state.finalizedItems.map((item, index) => {
+              return <Card key={index} item={item.name} click={() => {this.handleClick(item.name,index)}} close={item.close} complete={item.complete}/>
           })}
+        </div>
       </div>
     )
   }

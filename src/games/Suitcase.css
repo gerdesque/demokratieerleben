@@ -24,7 +24,6 @@
 .suitcase .items .ddcontainer:hover {
   transition: background-color 0.5s ease;
   opacity: 1;
-  cursor: pointer;
 }
 
 .suitcase .items:focus {
@@ -45,6 +44,7 @@
 .suitcase .items img {
   width: 100%;
   border-radius: 50%;
+  cursor: grab;
 }
 
 .suitcase .dragText {

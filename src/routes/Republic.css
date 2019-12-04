@@ -28,7 +28,11 @@
 }
 
 .republic #group4 {
-  z-index: 5;
+  z-index: 2;
+}
+
+.republic #group4 .box {
+  margin-top: 50%;
 }
 
 .republic #group5 {

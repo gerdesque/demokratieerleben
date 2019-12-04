@@ -8,7 +8,7 @@ const text = {};
 text["AnnaVater"] =
   "Anna gefiel diese Idee und so machte sie sich auf zur Ortsgruppe der sozialistischen Arbeiterjugend.";
 text["AnnaMutter"] =
-  "Anna behagte nicht, was ihre Mutter erzählt hatte. Von einer Freundin hatte sie von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstalteten. Das wollte sie sich mal ansehen!";
+  "Anna behagte nicht, was ihre Mutter erzählt hatte. Von einer Freundin hatte sie von der sozialistischen Arbeiterjugend gehört, die jedes Jahr in den Sommerferien Ferienlager veranstaltete. Das wollte sie sich mal ansehen!";
 text["AnnaGroßvater"] =
   "Anna wurde traurig bei dem Gedanken an ihrer verstorbene Großmutter, die sie sehr geliebt hatte. Es musste doch noch andere Möglichkeiten geben, sein Leben zu bestreiten. Hilfe und Rat erhoffte sie sich von der Ortsgruppe der sozialistischen Arbeiterjugend, von der sie einen Aushang in der Schule gesehen hatte.";
 text["KarlVater"] =

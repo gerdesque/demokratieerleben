@@ -17,6 +17,15 @@
   /* slide under groups 1 and 3 */
 }
 
+.local-group #group2 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/map.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.local-group .no-webp #group2 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/map.png);
+}
+
 .local-group #group3 {
   z-index: 4;
   /* slide over group 2 and 4 */

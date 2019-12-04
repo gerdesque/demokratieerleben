@@ -17,6 +17,15 @@
   /* slide under groups 1 and 3 */
 }
 
+.way #group2 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/map.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+}
+
+.way .no-webp #group2 .parallax__layer--deep {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/map.png);
+}
+
 .way #group3 {
   z-index: 4;
   /* slide over group 2 and 4 */
@@ -35,6 +44,16 @@
   z-index: 3;
 }
 
+.way #group5 .parallax__layer--base {
+  background-image: linear-gradient(to top,rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../assets/music.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+  opacity: 0.3;
+}
+
+.way .no-webp #group5 .parallax__layer--base {
+  background-image: url(../assets/fallback/music.png);
+}
+
 .way #group6 {
   z-index: 2;
 }
@@ -48,10 +67,15 @@
   background-image: url(../assets/fallback/ship.png);
 }
 
+.way #group7   {
+  z-index: 6;
+}
+
 .way .image p {
   margin: 1vw;
 }
 
 .way .image img {
   width: 75vw;
+  mask-image: linear-gradient(black 0%, transparent 100%);
 }

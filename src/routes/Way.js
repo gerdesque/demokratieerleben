@@ -42,7 +42,7 @@ class Way extends Component {
         </>
         <div className='box column image'>
           <p>{text[this.state.avatar + "Weg2"]}</p>
-          <FadingImage direction='adults' source='adults' />
+          <FadingImage direction='bottom' source='adults' />
         </div>
         <div className='box column'>
           <p>{text[this.state.avatar + "Weg3"]}</p>

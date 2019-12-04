@@ -8,7 +8,7 @@
   box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
-.family .no-webp #header .parallax__layer--base {
+.no-webp .family #header .parallax__layer--base {
   background-image: url(../assets/fallback/family.png);
 }
 
@@ -21,7 +21,7 @@
   background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/map.webp);
 }
 
-.family .no-webp #group2 .parallax__layer--deep {
+.no-webp .family #group2 .parallax__layer--deep {
   background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/fallback/map.png);
 }
 
@@ -35,7 +35,7 @@
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
-.family .no-webp #group2 .parallax__layer--deep {
+.no-webp .family #group2 .parallax__layer--deep {
   background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/fallback/way.png);
 }
 

@@ -8,7 +8,7 @@
   box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
-.republic .no-webp #header .parallax__layer--base {
+.no-webp .republic #header .parallax__layer--base {
   background-image: url(../assets/fallback/republic.png);
 }
 
@@ -48,7 +48,7 @@
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
 }
 
-.republic .no-webp #group6 .parallax__layer--base {
+.no-webp .republic #group6 .parallax__layer--base {
   background-image: url(../assets/fallback/ship.png);
 }
 

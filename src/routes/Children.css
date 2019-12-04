@@ -8,7 +8,7 @@
   box-shadow: 0 0 8px 8px #dcd5cc inset;
 }
 
-.children .no-webp #header .parallax__layer--base {
+.no-webp .children #header .parallax__layer--base {
   background-image: url(../assets/fallback/children.png);
 }
 

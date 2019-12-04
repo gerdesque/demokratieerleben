@@ -38,7 +38,7 @@
   background-size: contain;
 }
 
-.daily .no-webp .component_box  {
+.no-webp .daily .component_box  {
   background-image: url(../assets/fallback/daily.png);
 }
 

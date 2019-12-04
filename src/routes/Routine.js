@@ -2,7 +2,7 @@ import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./Routine.css";
 import Chapter from "../helper/Chapter";
-const TicTacToe = lazy(() => import("../games/TicTacToe"));
+const Memory = lazy(() => import("../games/Memory"));
 const Rain = lazy(() => import('../effects/Rain'));
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 
@@ -27,6 +27,10 @@ class Routine extends Component {
     document.querySelector(value).scrollIntoView({ behavior: 'smooth' });
   };
 
+  handleCheckMemory = () => {
+    setTimeout(() => this.setState({ redirect: true }), 1500);
+  };
+
   render() {
     return (
       <Chapter class="routine">
@@ -45,7 +49,7 @@ class Routine extends Component {
           <p>{text[this.state.avatar + "Routine3"]}</p>
         </div>
         <>
-          <TicTacToe />
+          <Memory onCheckMemory={this.handleCheckMemory}/>
           <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>Dein Magen knurrt und du hast jetzt keine Lust mehr, etwas zu spielen. Gehe direkt zum Essen.</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/food", state: { ...this.state } }} />}
         </>

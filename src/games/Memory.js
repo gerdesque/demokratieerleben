@@ -99,12 +99,15 @@ class Card extends React.Component {
     return (
       <div className={"card" + (!this.props.close ? ' opened' : '') + (this.props.complete ? ' matched' : '')} 
         onClick={() => this.clicked(this.props.item)}>
-        {!this.props.complete && <div className="front">
+        {/* {!this.props.complete && <div className="front">
           <FadingImage direction='logo' source='logo' />
         </div>}
         <div className="back">
           <FadingImage direction='logo' source={this.props.item} />
-        </div>
+        </div> */}
+        {!this.props.close || this.props.complete ? 
+        <div className="back"><FadingImage direction='logo' source={this.props.item} /></div> : 
+        <div className="front"><FadingImage direction='logo' source='logo' /></div>}
       </div>
     )
   }

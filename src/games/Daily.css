@@ -32,10 +32,13 @@
 }
 
 .daily .component_box {
-  min-width: 300px;
-  min-height: 300px;
-  background: url(../assets/daily.webp) no-repeat;
+  background: url(../assets/daily.webp) no-repeat center center;
   background-size: contain;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .no-webp .daily .component_box  {
@@ -45,20 +48,19 @@
 .daily img {
   height: auto;
   text-align: center;
-  width: 50%;
+  width: 60%;
   margin: 0 auto 0;
   justify-content: center;
   display: flex;
-}
-
-.daily .box_item_component:first-child {
-  padding: 10% 0 0 10%;
-}
-
-.daily .box_item_component {
-  padding-left: 10%;
+  max-height: 66vh;
 }
 
 .daily .show {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 600px) {
+  .daily .component_box {
+    height: 45vh;
+  }
 }

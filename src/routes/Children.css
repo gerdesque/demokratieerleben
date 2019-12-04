@@ -17,14 +17,13 @@
   /* slide under groups 1 and 3 */
 }
 
+.children #group2 .box {
+  margin-top: 20%;
+}
+
 .children #group3 {
   z-index: 4;
   /* slide over group 2 and 4 */
-}
-
-.children #group3 .parallax__layer--back {
-  background-image: none;
-  box-shadow: none;
 }
 
 .children #group4 {
@@ -33,7 +32,7 @@
 }
 
 .children #group4 .box {
-  margin-top: 50%;
+  margin-top: 40%;
 }
 
 .children .image p {

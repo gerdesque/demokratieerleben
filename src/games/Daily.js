@@ -28,17 +28,17 @@ class Daily extends Component {
     const daily = this.state.showResult ? 
       <FadingImage source='daily_result' /> : 
       <>
-      <Box targetKey="box"/>
-      <button type='button' className='link-button show' onClick={this.handleClick}>Tagesplan anzeigen!</button>
+        <Box targetKey="box"/>
+        <button type='button' className='link-button show' onClick={this.handleClick}>Tagesplan anzeigen!</button>
       </>
     return (
       <div className="daily">
         <p className="description">Um die einzelnen Tagespunkte in die richtige Reihenfolge zu bringen, ziehe sie einfach auf das Plakat. Klicke auf "Tagesplan anzeigen!", um dir den originalen Tagesablauf anzusehen.</p>
-        <div className="items">
-        {dailyPlanItems.map((item, index) =>
-          <Items key={index} targetKey="box" label={item} id={index} />
-        )}
-        </div>
+        {!this.state.showResult && <div className="items">
+          {dailyPlanItems.map((item, index) =>
+            <Items key={index} targetKey="box" label={item} id={index} />
+          )}
+          </div>}
         {daily}
       </div>
     )
@@ -92,27 +92,25 @@ class Box extends React.Component {
 
   render() {
     return (
-      <div>
-          <DropTarget
-            onHit={this.handleDrop}
-            targetKey={this.props.targetKey}
-            dropData={{name: this.props.name}}>
-            <DropTarget
-              onHit={this.handleDrop}
-              targetKey="boxItem"
-              dropData={{name: this.props.name}}>
-              <div className="component_box">
-                {this.state.items.map((item, index) => {
-                  return (
-                    <BoxItem key={item.uid} uid={item.uid} kill={this.kill} index={index} swap={this.swap}>
-                      {item.label}
-                    </BoxItem>
-                  )
-                })}
-              </div>
-            </DropTarget>
-          </DropTarget>
-      </div>
+      <DropTarget
+        onHit={this.handleDrop}
+        targetKey={this.props.targetKey}
+        dropData={{name: this.props.name}}>
+        <DropTarget
+          onHit={this.handleDrop}
+          targetKey="boxItem"
+          dropData={{name: this.props.name}}>
+          <div className="component_box">
+            {this.state.items.map((item, index) => {
+              return (
+                <BoxItem key={item.uid} uid={item.uid} kill={this.kill} index={index} swap={this.swap}>
+                  {item.label}
+                </BoxItem>
+              )
+            })}
+          </div>
+        </DropTarget>
+      </DropTarget>
     );
   }
 }

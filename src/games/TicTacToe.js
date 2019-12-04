@@ -14,14 +14,17 @@ function TicTacToe(props) {
   const winner = calculateWinner(squares);
   const userSymbol = "X";
   const computerSymbol = "O";
+  const description = `Um zu spielen, setze dein Kreuz in eines der Kästchen, indem du dort hinein klickst. Danach ist ${props.avatar} dran. Um zu gewinnen, musst du drei Kreuze in einer waagerechten, senkrechten oder diagonalen Reihe platzieren.`;
 
   function getStatus() {
     if (winner) {
+      document.querySelector('.game-result').scrollIntoView({ behavior: 'smooth' });
       return winner === "X" ? "Du hast gewonnen!" : "Es ist ja nur ein Spiel!";
     } else if (isBoardFull(squares)) {
+      document.querySelector('game-result').scrollIntoView({ behavior: 'smooth' });
       return "Ein solidarisches Remis!";
     } else {
-      return `Um zu spielen, setze dein Kreuz in eines der Kästchen, indem du dort hinein klickst. Danach ist ${props.avatar} dran. Um zu gewinnen, musst du drei Kreuze in einer waagerechten, senkrechten oder diagonalen Reihe platzieren.`;
+      return '';
     }
   }
 
@@ -55,7 +58,7 @@ function TicTacToe(props) {
   return (
     <div className='game'>
       <div className='game-info'>
-        <p>{getStatus()}</p>
+        <p>{description}</p>
       </div>
       <div className='game-board'>
         {renderSquare(0)}
@@ -67,6 +70,9 @@ function TicTacToe(props) {
         {renderSquare(6)}
         {renderSquare(7)}
         {renderSquare(8)}
+      </div>
+      <div className='game-result'>
+        <p>{getStatus()}</p>
       </div>
     </div>
   );

@@ -83,7 +83,7 @@ class Memory extends Component {
       <div className="memory">
         <p className="description">Spielbeschreibung einfügen!</p>
         {this.state.finalizedItems.map((item, index) => {
-            return <Card item={item.name} click={() => {this.handleClick(item.name,index)}} close={item.close} complete={item.complete}/>
+            return <Card key={index} item={item.name} click={() => {this.handleClick(item.name,index)}} close={item.close} complete={item.complete}/>
           })}
       </div>
     )
@@ -99,15 +99,9 @@ class Card extends React.Component {
     return (
       <div className={"card" + (!this.props.close ? ' opened' : '') + (this.props.complete ? ' matched' : '')} 
         onClick={() => this.clicked(this.props.item)}>
-        {/* {!this.props.complete && <div className="front">
-          <FadingImage direction='logo' source='logo' />
-        </div>}
-        <div className="back">
-          <FadingImage direction='logo' source={this.props.item} />
-        </div> */}
         {!this.props.close || this.props.complete ? 
-        <div className="back"><FadingImage direction='logo' source={this.props.item} /></div> : 
-        <div className="front"><FadingImage direction='logo' source='logo' /></div>}
+        <div className="back"><FadingImage source={this.props.item} /></div> : 
+        <div className="front"><FadingImage source='logo' /></div>}
       </div>
     )
   }

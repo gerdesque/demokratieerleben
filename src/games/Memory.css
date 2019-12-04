@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   perspective: 1000px;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   align-items: center;
   padding: 0 4px;
@@ -67,5 +67,17 @@
   }
   100% {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 600px) {
+  .memory {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .memory {
+    width: 50%;
   }
 }

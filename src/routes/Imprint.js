@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./Imprint.css";
+import FadingImage from "../helper/FadingImage";
 import Chapter from "../helper/Chapter";
 
 const text = {};
@@ -22,8 +23,9 @@ class Imprint extends Component {
         <div className='box column'>
           <p>{text["Imprint1"]}</p>
         </div>
-        <div className='box column'>
+        <div className='box column image'>
           <p>{text["Imprint2"]}</p>
+          <FadingImage direction='bottom' source='cleaning' />
         </div>
         <div className='box'>
           <p>Diese Website entstand im Rahmen des <a href="https://codingdavinci.de/events/westfalen-ruhrgebiet/" target="_blank" rel="noopener noreferrer">Coding da Vinci Westfalen-Ruhrgebiet</a> von Oktober bis Dezember 2019. 

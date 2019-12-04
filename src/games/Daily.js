@@ -26,7 +26,7 @@ class Daily extends Component {
 
   render() {
     const daily = this.state.showResult ? 
-      <FadingImage direction='daily_result' source='daily_result' /> : 
+      <FadingImage source='daily_result' /> : 
       <>
       <Box targetKey="box"/>
       <button type='button' className='link-button' onClick={this.handleClick}>Tagesplan prüfen!</button>

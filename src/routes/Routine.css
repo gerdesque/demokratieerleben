@@ -31,32 +31,21 @@
   z-index: 2;
 }
 
-.routine #group6 {
-  z-index: 3;
-}
-
-.routine #group6 .parallax__layer--base {
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../assets/ship.webp);
+.routine #group5 .parallax__layer--base {
+  background-image: linear-gradient(to top,rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../assets/election.webp);
   box-shadow: 0 0 8px 8px #c7bbb2 inset;
+  opacity: 0.7;
 }
 
-.routine .no-webp #group6 .parallax__layer--base {
-  background-image: url(../assets/fallback/ship.png);
+.routine .no-webp #group5 .parallax__layer--base {
+  background-image: url(../assets/fallback/election.png);
 }
-/*
-.routine #group6 .parallax__layer--back {
-  background-image: url(../assets/tent_rules.webp);
-}
-
-.routine .no-webp #group6 .parallax__layer--back {
-  background-image: url(../assets/fallback/tent_rules.png);
-}
-*/
 
 .routine .image p {
   margin: 1vw;
 }
 
 .routine .image img {
-  width: 100vw;
+  width: 75vw;
+  mask-image: linear-gradient(black 0%, transparent 100%);
 }

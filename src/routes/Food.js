@@ -2,6 +2,7 @@ import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./Food.css";
 import Chapter from "../helper/Chapter";
+import FadingImage from "../helper/FadingImage";
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 
 const text = {};
@@ -33,8 +34,9 @@ class Food extends Component {
           <p>{text[this.state.avatar + "Food1"]}</p>
           <PlayableVideo source={`${this.state.avatar}_Essen`} pauseVideo={() => this.pauseVideo('#group3')}/>
         </div>
-        <div className='box column'>
+        <div className='box column image'>
           <p>{text[this.state.avatar + "Food2"]}</p>
+          <FadingImage direction='bottom' source='letter' />
         </div>
         <div className='box'>
           <p>{text[this.state.avatar + "Food3"]}</p>

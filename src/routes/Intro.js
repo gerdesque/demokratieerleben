@@ -21,7 +21,7 @@ class Intro extends Component {
   render = () => {
     return (
       <Chapter class="intro">
-        <FadeInSection direction='title' onOutOfView={value => this.stopAudio(value)}>
+        <FadeInSection onOutOfView={value => this.stopAudio(value)}>
           <div className='title'><h1>Demokratie <i>er</i>leben</h1></div>
           <Birds />
           <audio ref={this.setBirdsRef} hidden loop>

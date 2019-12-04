@@ -43,7 +43,7 @@ class Suitcase extends Component {
           dropData={{name: "Bag"}}
         >
           <div className='bag'>
-            <FadingImage direction='bag' source='bag' />
+            <FadingImage source='bag' />
             <div className="dragText">{this.state.drag}</div>
           </div>
         </DropTarget>
@@ -59,7 +59,7 @@ class Items extends React.Component {
         targetKey={this.props.targetKey}
         dragData={{label: this.props.label}}
         render = {() => {
-          return <FadingImage direction={this.props.image} source={this.props.image} />
+          return <FadingImage source={this.props.image} />
         }}
       />    
     );

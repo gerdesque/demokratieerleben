@@ -2,6 +2,7 @@ import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
 import "./Routine.css";
 import Chapter from "../helper/Chapter";
+import FadingImage from "../helper/FadingImage";
 const Memory = lazy(() => import("../games/Memory"));
 const Rain = lazy(() => import('../effects/Rain'));
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
@@ -42,8 +43,9 @@ class Routine extends Component {
           <p>{text[this.state.avatar + "Routine1"]}</p>
           <PlayableVideo source={`${this.state.avatar}_Gewitter`} pauseVideo={() => this.pauseVideo('#group3')}/>
         </div>
-        <div className='box column'>
+        <div className='box column image'>
           <p>{text[this.state.avatar + "Routine2"]}</p>
+          <FadingImage direction='bottom' source='tent' />
         </div>
         <div className='box column'>
           <p>{text[this.state.avatar + "Routine3"]}</p>

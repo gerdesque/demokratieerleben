@@ -5,7 +5,7 @@ import FadingImage from "../helper/FadingImage";
 function SmokingPit() {
   return (
     <div className='smokingPit'>
-      <FadingImage direction='pit_without_smoke' source='pit_without_smoke' />
+      <FadingImage source='pit_without_smoke' />
       <div className='smoke'>
         <span className='s0'></span>
         <span className='s1'></span>

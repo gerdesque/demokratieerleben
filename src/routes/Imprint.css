@@ -13,8 +13,16 @@
 }
 
 .imprint #group2 {
-  z-index: 4;
+  z-index: 2;
   /* slide under groups 1 and 3 */
+}
+
+.imprint #group2 .parallax__layer--deep {
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/map.webp);
+}
+
+.imprint .no-webp #group2 .parallax__layer--deep {
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(../assets/fallback/map.png);
 }
 
 .imprint #group3 {
@@ -27,10 +35,29 @@
   /* slide over group 2 and 4 */
 }
 
+.imprint #group4 .box {
+  margin-top: 50%;
+}
+
 .imprint #group5 {
   z-index: 2;
 }
 
-.imprint #group6 {
-  z-index: 3;
+.imprint #group5 .parallax__layer--base {
+  background-image:  url(../assets/sport.webp);
+  box-shadow: 0 0 8px 8px #c7bbb2 inset;
+  opacity: 0.2;
+}
+
+.imprint .no-webp #group5 .parallax__layer--base {
+  background-image: url(../assets/fallback/sport.png);
+}
+
+.imprint .image p {
+  margin: 1vw;
+}
+
+.imprint .image img {
+  width: 75vw;
+  mask-image: linear-gradient(black 0%, transparent 100%);
 }

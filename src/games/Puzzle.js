@@ -69,11 +69,11 @@ class Puzzle extends Component {
     const boardContent = (boardName === "shuffled") ? 
     <DragDropContainer key={index} targetKey="puzzle" dragData={{piece: piece}} onDrop={e => this.handleDrop(e, "solved")}>
       <DropTarget targetKey="puzzle">
-        <li>{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+        <li>{piece && (<FadingImage source={piece.img} />)}</li>
       </DropTarget>
     </DragDropContainer> :
     <DropTarget key={index} targetKey="puzzle">
-      <li >{piece && (<FadingImage direction={piece.img} source={piece.img} />)}</li>
+      <li >{piece && (<FadingImage source={piece.img} />)}</li>
     </DropTarget>
     return boardContent;
   }

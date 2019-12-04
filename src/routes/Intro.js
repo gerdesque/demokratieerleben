@@ -15,7 +15,17 @@ class Intro extends Component {
 
   stopAudio = value => {
     if (!this.birds) return;
-    value ? this.birds.pause() : this.birds.play();
+
+    var promise = value ? this.birds.pause() : this.birds.play();
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        // Autoplay started!
+      }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+      });
+}
   };
 
   render = () => {

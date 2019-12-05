@@ -22,6 +22,12 @@ class Republic extends Component {
     };
   }
 
+  componentDidMount() {
+    //TODO: Fix method for removing scaled layers
+    document.getElementsByClassName('parallax__layer--base')[3].appendChild(document.getElementsByClassName('dailyContainer')[0]);
+    document.getElementsByClassName('parallax__layer--fore')[1].remove();
+  }
+
   pauseVideo = value => {
     document.querySelector(value).scrollIntoView({ behavior: 'smooth' });
   };
@@ -47,11 +53,11 @@ class Republic extends Component {
         <div className='box column image'>
           <p>{text[this.state.avatar + "Republik3"]}</p>
         </div>
-        <>
+        <div className="dailyContainer">
           <Daily onCheckDaily={this.handleCheckDaily}/>
           <button type='button' className='link-button redirect' onClick={() => this.setState({redirect: true})}>{redirectText}</button>
           {this.state.redirect && <Redirect exact to={{ pathname: "/children", state: { ...this.state } }} />}
-        </>
+        </div>
       </Chapter>
     );
   }

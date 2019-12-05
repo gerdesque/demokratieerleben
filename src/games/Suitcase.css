@@ -7,7 +7,7 @@
 
 .suitcase .description {
   width: 75vw;
-  margin: auto;
+  margin: 10% auto 0;
   text-align: center;
 }
 
@@ -47,6 +47,10 @@
   cursor: grab;
 }
 
+.suitcase .ddcontainerghost img {
+  width: 25vw;
+}
+
 .suitcase .dragText {
   text-align: center;
 }
@@ -54,5 +58,9 @@
 @media (min-width: 600px) {
   .suitcase .items > * {
     width: 10%;
+  }
+
+  .suitcase .ddcontainerghost img {
+    width: 10vw;
   }
 }

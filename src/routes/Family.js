@@ -29,6 +29,12 @@ class Family extends Component {
     };
   }
 
+  componentDidMount() {
+    //TODO: Fix method for removing scaled layers
+    document.getElementsByClassName('parallax__layer--base')[3].appendChild(document.getElementsByClassName('puzzleContainer')[0]);
+    document.getElementsByClassName('parallax__layer--fore')[1].remove();
+  }
+
   setAudioRef = element => {
     this.audio = element;
   };
@@ -68,10 +74,10 @@ class Family extends Component {
         <div className='box'>
           <p>{this.state.avatar} hat einen Stadtplan mit dem eingezeichneten Weg zur Ortsgruppe bekommen. Nur leider ist dieser in mehrere Teile zerrissen. Hilf {this.state.avatar}, ihn wieder zusammenzufügen, um zum Treffpunkt der Ortsgruppe zu gelangen. Ziehe dazu die durcheinandergewürfelten Kartenausschnitte in das entsprechende vorgezeichnete Feld. Wenn du das Puzzle richtig gelöst hast, kommst du zum nächsten Kapitel.</p>
         </div>
-        <>
+        <div className='puzzleContainer'>
           <Puzzle onCheckBoard={this.handleCheckBoard} />
           {this.state.hasPuzzleSolved && <Redirect exact to={{ pathname: "/localgroup", state: { ...this.state } }} />}
-        </>
+        </div>
       </Chapter>
     );
   }

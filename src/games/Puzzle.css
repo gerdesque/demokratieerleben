@@ -1,8 +1,21 @@
+.puzzleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.puzzleBox .description {
+  width: 75vw;
+  margin: auto;
+  text-align: center;
+}
+
 .puzzle{
   display: flex;
   flex-flow: row wrap;
 }
-  
+
 .puzzle > * {
   flex: 1 50%;
 }
@@ -51,7 +64,6 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  cursor: grab;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 

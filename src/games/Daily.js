@@ -6,8 +6,8 @@ import FadingImage from "../helper/FadingImage";
 var shortid = require('shortid');
 const dailyPlanItems = ["Waschen und Baden", "Frühstück", "Wanderungen machen", "Sprechstunde des Lagerarztes", 
 "Lagerruhe - Post- und Zeitungsausgabe", "Tagung des Lagerparlaments", "Gemeinsame Veranstaltungen", "Zeltruhe"];
-const dailyPlanSchedule = ["Morgens 6 Uhr", "Morgens 8 Uhr", "Morgens 8 ½ – 12 Uhr ", "Morgens 8 ½ – 9 ½", "Mittags 12 ½ – 14 ½ ",
-"Nachmittags 14 ½ – 19 Uhr", "Abends 19 ½ – 21 Uhr", "Abends 21 Uhr"]
+const dailyPlanSchedule = ["6 Uhr", "8 Uhr", "8 ½ – 12 Uhr ", "8 ½ – 9 ½", "12 ½ – 14 ½ ",
+"18 – 19 Uhr", "19 ½ – 21 Uhr", "21 Uhr"]
 
 class Daily extends Component {
 

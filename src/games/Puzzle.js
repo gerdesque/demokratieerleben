@@ -60,14 +60,17 @@ class Puzzle extends Component {
 
   render() {
     return (
-      <div className='puzzle'>
-        <ul className='puzzle__shuffled-board'>
-          {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, "shuffled"))}
-        </ul>
-        <ol className='puzzle__solved-board' style={{ backgroundImage: `url(${originalImage})` }}>
-          {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, "solved"))}
-        </ol>
-        <button type='button' className='link-button' onClick={() => this.props.onCheckBoard(true)}>Du kennst eine Abkürzung und gehst direkt zur Ortsgruppe.</button>
+      <div className='puzzleBox'>
+        <p className="description">Setze den Stadtplan richtig zusammen, indem du die einzelnen Kartenausschnitte auf die entsprechende vorgezeichnete Stelle des leeren Planes ziehst. Wenn du das Puzzle richtig gelöst hast, kommst du weiter zur Ortgruppe. </p>
+        <div className='puzzle'>
+          <ul className='puzzle__shuffled-board'>
+            {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, "shuffled"))}
+          </ul>
+          <ol className='puzzle__solved-board' style={{ backgroundImage: `url(${originalImage})` }}>
+            {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, "solved"))}
+          </ol>
+          <button type='button' className='link-button' onClick={() => this.props.onCheckBoard(true)}>Du kennst eine Abkürzung und gehst direkt zur Ortsgruppe.</button>
+        </div>
       </div>
     );
   }

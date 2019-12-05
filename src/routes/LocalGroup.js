@@ -27,6 +27,13 @@ class LocalGroup extends Component {
     };
   }
 
+  componentDidMount() {
+    //TODO: Fix method for removing scaled layers
+    document.getElementsByClassName('parallax__layer--base')[4].appendChild(document.getElementsByClassName('suitcaseContainer')[0]);
+    document.getElementsByClassName('parallax__layer--fore')[2].remove();
+    document.getElementsByClassName('parallax__layer--back')[1].remove();
+  }
+
   setAudioRef = element => {
     this.audio = element;
   };
@@ -79,11 +86,11 @@ class LocalGroup extends Component {
         <div className='box column'>
           <p>{text[this.state.avatar + "Ortsgruppe4"]}</p>
         </div>
-        <>
+        <div className="suitcaseContainer">
           <Suitcase avatar={this.state.avatar} onCheckBag={this.handleCheckBag}/>
           <button type='button' className='link-button redirect' onClick={() => this.setState({hasGameSolved: true})}>Du sitzt schon längst auf gepackten Koffern und gehst direkt zum Treffpunkt.</button>
           {this.state.hasGameSolved && <Redirect exact to={{ pathname: "/way", state: { ...this.state } }} />}
-        </>
+        </div>
       </Chapter>
     );
   }

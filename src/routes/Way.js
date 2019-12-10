@@ -1,6 +1,6 @@
 import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./Way.css";
+import "./Way.scss";
 import FadingImage from "../helper/FadingImage";
 import Chapter from "../helper/Chapter";
 const TicTacToe = lazy(() => import("../games/TicTacToe"));

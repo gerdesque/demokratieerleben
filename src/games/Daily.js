@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Daily.css";
+import "./Daily.scss";
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import FadingImage from "../helper/FadingImage";
 

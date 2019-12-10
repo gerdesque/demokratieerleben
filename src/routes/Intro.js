@@ -1,5 +1,5 @@
 import React, { Component, lazy } from "react";
-import "./Intro.css";
+import "./Intro.scss";
 import Birds from "../effects/Birds";
 import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";

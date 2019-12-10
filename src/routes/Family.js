@@ -1,6 +1,6 @@
 import React, { Component, lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./Family.css";
+import "./Family.scss";
 import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";
 const Puzzle = lazy(() => import("../games/Puzzle"));

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import originalImage from "../assets/puzzle.webp";
-import "./Puzzle.css";
+import "./Puzzle.scss";
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import FadingImage from "../helper/FadingImage";
 

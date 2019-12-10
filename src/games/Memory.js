@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Memory.css";
+import "./Memory.scss";
 import FadingImage from "../helper/FadingImage";
 
 class Memory extends Component {

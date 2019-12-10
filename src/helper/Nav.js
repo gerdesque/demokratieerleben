@@ -1,18 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Nav.css";
+import "./Nav.scss";
 
 function Nav() {
   const items = ["/", "/family", "/localgroup", "/way", "/republic", "/children", "/routine", "/food"];
 
   return (
     <nav>
-      <ul>
+      <ul className='navigation'>
         {items.map((item, index) => (
-          <li key={index}>
-            <NavLink exact to={item}>
-              {item}
-            </NavLink>
+          <li className='navigation--item' key={index}>
+            <NavLink exact to={item} />
           </li>
         ))}
       </ul>

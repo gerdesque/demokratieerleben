@@ -1,6 +1,6 @@
 import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./Republic.css";
+import "./Republic.scss";
 import Chapter from "../helper/Chapter";
 const Daily = lazy(() => import("../games/Daily"));
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Suitcase.css";
+import "./Suitcase.scss";
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import FadingImage from "../helper/FadingImage";
 

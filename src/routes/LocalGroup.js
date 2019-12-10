@@ -1,6 +1,6 @@
 import React, { Component, lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./LocalGroup.css";
+import "./LocalGroup.scss";
 import FadingImage from "../helper/FadingImage";
 import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rain.css";
+import "./Rain.scss";
 
 function Rain() {
   return <div className='rain'></div>;

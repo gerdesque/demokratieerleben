@@ -1,5 +1,5 @@
 import React from "react";
-import "./Birds.css";
+import "./Birds.scss";
 
 function Birds() {
   return (

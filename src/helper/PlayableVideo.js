@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./PlayableVideo.css";
+import "./PlayableVideo.scss";
 
 class PlayableVideo extends Component {
   constructor(props) {

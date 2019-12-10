@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Chapter.css";
+import "./Chapter.scss";
 
 class Chapter extends Component {
   render() {

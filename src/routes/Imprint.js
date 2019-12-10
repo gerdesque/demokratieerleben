@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import "./Imprint.css";
+import "./Imprint.scss";
 import FadingImage from "../helper/FadingImage";
 import FadeInSection from "../helper/FadeInSection";
 import Chapter from "../helper/Chapter";

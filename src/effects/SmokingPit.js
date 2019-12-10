@@ -1,5 +1,5 @@
 import React from "react";
-import "./SmokingPit.css";
+import "./SmokingPit.scss";
 import FadingImage from "../helper/FadingImage";
 
 function SmokingPit() {

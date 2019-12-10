@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import "./IntroDecission.css";
+import "./IntroDecission.scss";
 import FadeInSection from "../helper/FadeInSection";
 import FadingImage from "../helper/FadingImage";
 

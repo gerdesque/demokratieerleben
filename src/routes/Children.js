@@ -1,6 +1,6 @@
 import React, { Component,lazy } from "react";
 import { Redirect } from "react-router-dom";
-import "./Children.css";
+import "./Children.scss";
 import Chapter from "../helper/Chapter";
 const PlayableVideo = lazy(() => import('../helper/PlayableVideo'));
 

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Nav from "./helper/Nav";
 const Intro = lazy(() => import("./routes/Intro"));
 const Family = lazy(() => import("./routes/Family"));

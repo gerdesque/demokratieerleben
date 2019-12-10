@@ -1,6 +1,5 @@
 .video {
   position: relative;
-  display: inline-block;
 }
 
 .play {
@@ -9,7 +8,6 @@
   left: 50%;
   border: 0;
   background: transparent;
-  box-sizing: border-box;
   width: 0;
   height: 74px;
   border-color: transparent transparent transparent #202020;

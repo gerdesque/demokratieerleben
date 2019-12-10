@@ -61,7 +61,7 @@
   color: #E3000F;
 }
 
-video {
+.decission video {
   width: 100%;
   height: 100%;
   max-width: 960px;
@@ -69,7 +69,7 @@ video {
 }
 
 @media (min-width: 600px) {
-  video {
+  .decission video {
     margin-bottom: -10vw;
   }
 }

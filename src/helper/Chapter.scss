@@ -51,8 +51,10 @@
 .title {
   color: chocolate;
   text-align: center;
-  max-width: 1200px;
-  margin: 30vh auto 0;
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translate(-50%, -50%);
 }
 
 .box {

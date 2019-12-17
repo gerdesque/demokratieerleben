@@ -17,12 +17,10 @@
   perspective: 1000px;
   margin: 0 auto;
   align-items: center;
-  padding: 0 4px;
 }
 
 .memory .card {
   flex: 25%;
-  max-width: 21%;
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
@@ -37,16 +35,19 @@
 .memory .card .front {
   cursor: pointer;
 }
-.memory .card:not(.matched) .back  {
+
+.memory .card:not(.matched) .back {
   transform: rotateY(180deg);
 }
 
 .memory .card img {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 4px;
   vertical-align: middle;
 }
-.memory .card.opened, .memory .card.matched {
+
+.memory .card.opened,
+.memory .card.matched {
   transform: rotateY(180deg);
 }
 
@@ -56,19 +57,24 @@
   animation-fill-mode: both;
   opacity: 0.2;
 }
+
 @keyframes selected {
   0% {
     opacity: 0.2;
   }
+
   30% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 0.9;
   }
+
   70% {
     opacity: 0.2;
   }
+
   100% {
     opacity: 0.3;
   }
@@ -81,7 +87,7 @@
 }
 
 @media (min-width: 1200px) {
-  .memory .cards{
+  .memory .cards {
     width: 50%;
   }
 }

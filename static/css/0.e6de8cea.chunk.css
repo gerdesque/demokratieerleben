@@ -1,0 +1,2 @@
+.video{position:relative}.play{position:absolute;top:50%;left:50%;border:0;background:transparent;width:0;height:74px;cursor:pointer;border-color:transparent transparent transparent #202020;border-style:solid;border-width:37px 0 37px 60px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10}.play:hover{border-color:transparent transparent transparent #404040}.play.hide{display:none}
+/*# sourceMappingURL=0.e6de8cea.chunk.css.map */

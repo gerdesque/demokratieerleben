@@ -1,0 +1,1 @@
+{"version":3,"sources":["effects/Rain.js"],"names":["Rain","className"],"mappings":"yHAAA,kCAOeA,UAJf,WACE,OAAO,yBAAKC,UAAU,W","file":"static/js/18.c9a5bca0.chunk.js","sourcesContent":["import React from \"react\";\nimport \"./Rain.scss\";\n\nfunction Rain() {\n  return <div className='rain'></div>;\n}\n\nexport default Rain;\n"],"sourceRoot":""}

@@ -1,2 +1,0 @@
-(this.webpackJsonpdemokratieerleben=this.webpackJsonpdemokratieerleben||[]).push([[18],{265:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a);t(266);n.default=function(){return r.a.createElement("div",{className:"rain"})}},266:function(e,n,t){}}]);
-//# sourceMappingURL=18.acc6df5f.chunk.js.map

@@ -1,4 +1,8 @@
-# Demokratie *er*leben
+# [Demokratie erLeben](https://gerdesque.github.io/demokratieerleben/)
+
+Die aktuelle Version des Projekts kann unter [Demokratie erLeben 2020](https://gerdesque.github.io/demokratieerleben2020/) besucht werden!
+
+![Demokratie erLeben](https://codingdavinci.de/img/projekte/2019_west/demokratie_erleben.jpg)
 
 Es ist 1927. Karl und Anna, zwei Kinder aus Arbeiterfamilien machen sich
 Gedanken über ihre Zukunft. Sollen sie den selben Weg einschlagen wie
